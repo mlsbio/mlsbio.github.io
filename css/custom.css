@@ -420,3 +420,56 @@ NO MORE TABLES!! ;)
 		font-weight: bold;
 	}
 }
+
+.schedule {
+  width: 100%;
+  max-width: 100rem;
+}
+.schedule tr:nth-child(even) th {
+  color: #ccc;
+  font-weight: normal;
+}
+.schedule th,
+.schedule td {
+  padding: 0.5rem 1rem;
+}
+.schedule th {
+  font-weight: normal;
+  border-top: thin dotted #ccc;
+}
+.schedule td {
+  font-weight: bold;
+  line-height: 1.4;
+  border-radius: 0.2rem;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.schedule td > span {
+  font-weight: normal;
+  display: block;
+  width: 100%;
+}
+
+.stage-earth {
+  background-color: #FFA726;
+}
+
+.stage-mercury {
+  background-color: #9CCC65;
+}
+
+.stage-venus {
+  background-color: #FF8A65;
+}
+
+.stage-mars {
+  background-color: #B3E5FC;
+}
+
+.stage-jupiter {
+  background-color: #81D4FA;
+}
+
+.stage-saturn {
+  background-color: #26C6DA;
+}
