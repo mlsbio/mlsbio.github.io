@@ -491,3 +491,27 @@ NO MORE TABLES!! ;)
 .bulleted li {
     list-style-type: disc;
 }
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+}
+.title {
+    margin: 0;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 0.9;
+}
+
+.authors {
+    display: inline;
+    font-size: 14px;
+}
+
+.paperlist li {
+    margin-bottom: 10px;
+    li:last-child {
+        margin-bottom: 0px;
+    }
+}
