@@ -62,3 +62,9 @@ class Schedule:
                 f"<tr><th>{self.currtime.strftime('%I:%M')}</th></tr>"
             )
             self.currtime += timedelta(minutes=10)
+
+
+if __name__ == "__main__":
+    s = Schedule("schedule.csv")
+    text = s.get_schedule()
+    print(text)
