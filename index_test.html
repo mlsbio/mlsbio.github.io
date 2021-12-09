@@ -203,7 +203,14 @@ function showhide(id) {
 				  <img class="magnify img-rounded" src="img/speakers/john_jumper.jpg" alt="John Jumper">
 				  <h3>John Jumper</h3>
 				  <p class="lead3">Keynote</p>
-                  <p class="lead">Senior Staff Research Scientist at DeepMind.</p>
+                  <p class="lead" style="margin-bottom:0;>Senior Staff Research Scientist at DeepMind.</p>
+		  <a onclick="showhide('john_jumper')">Show/Hide Bio</a>
+		  <div style="display: none; text-align: left; text-indent: 30px;" id="john_jumper">
+			  <p>John has a PhD in chemistry from the University of Chicago. Before that,
+				  he worked on molecular dynamics simulations of proteins and supercooled liquids.</p>
+			  <p>John leads the development of next-generation AlphaFold models. He designs algorithms, 
+				  acts as a domain expert, and ensures that DeepMind’s work beneficially solves challenges in protein biology.</p>
+		  </div>
 				  <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
 				</div><!-- /.col-md-6 -->
 				<div class="col-sm-6 wow fadeInDown text-center">
@@ -231,7 +238,7 @@ function showhide(id) {
 				  Academies of Sciences & of Medicine, and a James B. Duke Professor of Biochemistry at Duke, and has three honorary 
 				  degrees to fill in for her lack of a PhD.  For more details, see Ann. Rev. Biophysics (2013) 4:1-28 or J. Biol. 
 				  Chem. (2021) 296:100742.</p>
-		  </div>
+		   </div>
 				  <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
 				</div><!-- /.col-md-6 -->
             </div> <!-- row -->
