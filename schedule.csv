@@ -8,11 +8,11 @@ Contributed Talk:,"Structure-aware generation of drug-like molecules (Pavol Drot
 Contributed Talk:,"Learning physics confers pose-sensitivity in structure-based virtual screening (Pawel Gniewek, Bradley Worley, Kate Stafford, Brandon Anderson, Henry van den Bedem)",10
 Contributed Talk:,"Inferring a Continuous Distribution of Atom Coordinates from Cryo-EM Images using VAEs (Dan Rosenbaum, Marta Garnelo, Michal Zielinski, Charlie Beattie, Ellen Clancy, Andrea Huber, Pushmeet Kohli, Andrew Senior, John Jumper, Carl Doersch, S. M. Ali Eslami, Olaf Ronneberger, Jonas Adler)",10
 Contributed Talk:,"Weakly Supervised Learning for Joint Image Denoising and Protein Localization in Cryo-EM (Qinwen Huang, Alberto Bartesaghi, Ye Zhou, Hsuan-fu Liu)",10
-Keynote - John Jumper,,40
+Keynote - John Jumper:,Highly accurate protein structure prediction with AlphaFold,40
 Poster Session,Held on gather.town,60
 Panel Discussion,,60
 *Afternoon Session,,
-Keynote - Jane Richardson,,40
+Keynote - Jane Richardson:,The Very Early Days of Structural Biology before ML,40
 Break,,10
 Contributed Talk:,"Predicting cryptic pocket opening from protein structures using graph neural networks (Artur Meller, Michael Ward, Meghana Kshirsagar, Felipe Oviedo Perhavec, Jonathan Borowsky, Juan M Lavista Ferres, Greg Bowman)",10
 Contributed Talk:,"End-to-end learning of multiple sequence alignments with differentiable Smith-Waterman (Samantha Petti, Nicholas Bhattacharya, Roshan Rao, Justas Dauparas, Neil Thomas, Juannan Zhou, Alexander Rush, Peter K. Koo, Sergey Ovchinnikov)",10
