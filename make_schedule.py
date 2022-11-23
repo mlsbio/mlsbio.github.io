@@ -11,8 +11,8 @@ class Schedule:
             year=2021,
             month=12,
             day=13,
-            hour=9,
-            minute=0,
+            hour=8,
+            minute=30,
         )
         self.currtime = self.start
 
@@ -47,7 +47,8 @@ class Schedule:
         length: int,
         color: str,
     ):
-        rowspan = length // 10
+        unit = 5
+        rowspan = length // unit
         first_block = (
             f'<tr><th>{self.currtime.strftime("%I:%M")}</th><td colspan="4" '
             f'rowspan={rowspan} class="{color}">{title}'
@@ -56,12 +57,12 @@ class Schedule:
             first_block += f'<p style="font-weight:normal">{description}</p>'
         first_block += "</td></tr>"
         self.blocks[-1].append(first_block)
-        self.currtime += timedelta(minutes=10)
+        self.currtime += timedelta(minutes=unit)
         for _ in range(1, rowspan):
             self.blocks[-1].append(
                 f"<tr><th>{self.currtime.strftime('%I:%M')}</th></tr>"
             )
-            self.currtime += timedelta(minutes=10)
+            self.currtime += timedelta(minutes=unit)
 
 
 if __name__ == "__main__":
