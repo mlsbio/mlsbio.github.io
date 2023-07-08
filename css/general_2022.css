@@ -258,7 +258,7 @@ color: #ECEBEB;
 	padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
 	padding-bottom: 50px;
 	color: #f8f8f8;
-	background: url(../img/autophagy.mp4) no-repeat center center;
+	background: url(../img/autophagy3.png) no-repeat center center;
 	background-size: cover;
 	text-align: center;
 }
@@ -316,7 +316,6 @@ color: #ECEBEB;
 .section-heading {
 	margin-bottom: 30px;
 }
-
 
 .section-heading-spacer {
 	border-top: 3px solid #e7e7e7;
