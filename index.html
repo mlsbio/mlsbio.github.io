@@ -100,9 +100,11 @@ function showhide(id) {
       <ul class="nav navbar-nav">
         <li class="menuItem"><a href="#about">About</a></li>
         <li class="menuItem"><a href="#callforpapers">Call for Papers</a></li>
+       
         <!-- <li class="menuItem"><a href="#presenterinfo">Presenter Information</a></li> -->
         <!-- <li class="menuItem"><a href="#faq">FAQ</a></li>-->
         <li class="menuItem"><a href="#invitedspeakers">Invited Speakers</a></li>
+        <li class="menuItem"><a href="#challenge">Challenge</a></li>
         <!-- <li class="menuItem"><a href="#preregistration">Pre-Registration</a></li> -->
         <!-- <li class="menuItem"><a href="#schedule">Schedule</a></li> -->
         <!-- <li class="menuItem"><a href="#accepted">Accepted Papers</a></li> -->
@@ -186,6 +188,8 @@ function showhide(id) {
   </div>
 </div> -->
 
+
+
 <!-- Call for Papers -->
 <div id ="callforpapers" class="content-section-b">
   <div class="container">
@@ -193,6 +197,7 @@ function showhide(id) {
       <div class="col-md-12 wow fadeInRightBig" data-animation-delay="200">
         <h2 class="section-heading">Call For Papers</h2>
         <p>We welcome submissions of short papers leveraging machine learning to address problems in structural biology, including but not limited to:</p>
+        <p>
         <ul class="bulleted">
           <li>Prediction of biomolecular structures, complexes, and interactions</li>
           <li>Design of or generative models for structure and/or sequence</li>
@@ -206,6 +211,7 @@ function showhide(id) {
           <li>Language models and other implicit representations of protein structure</li>
           <li>Forward-looking position papers</li>
         </ul>
+      </p>
         <p>We request anonymized PDF submissions by <strong>Wednesday, September 18, 2024, at 11:59PM, AoE (anywhere on earth)</strong> through our submission website on <a href="https://cmt3.research.microsoft.com/MLSB2024">CMT</a>. </p></p>
         <p>Papers should present novel work that has not been previously accepted at an archival venue at the time of submission.  Submissions should be a <em>maximum</em> of 5 pages (excluding references and appendices) in PDF format, using the <a href="https://media.neurips.cc/Conferences/NeurIPS2024/Styles.zip">NeurIPS style files</a>, and fully anonymized as per the requirements of NeurIPS. The NeurIPS checklist can be omitted from the submission. Submissions meeting these criteria will go through a light, double-blind review process. Reviewer comments will be returned to the authors as feedback.</p>
         <p>Accepted papers will be invited to present a poster at the workshop, with nominations of spotlight talks at the discretion of the organizers.</p>
@@ -221,6 +227,8 @@ function showhide(id) {
     </div>
   </div>
 </div>
+
+
 
 <div id="invitedspeakers" class="content-section-a" style="border-top: 0">
   <div class="container">
@@ -1105,104 +1113,215 @@ function showhide(id) {
       </div>
     </div> -->
   
-    <div id="organizers" class="content-section-a" style="border-top: 0">
-    <div class="container">
-      <h2 class="section-heading">Organizers</h2>
-      <div class="row wow fadeInRightBig"  data-animation-delay="200">
-        <div class="row">
-        <div class="col-sm-4 wow fadeInRightBig"  data-animation-delay="200">
-          <center>
-            <img  class="magnify img-responsive img-rounded" style="border-radius: 50%" height="180" width="180" src="img/organizer/gabriele_corso.png" alt="Photo of Gabriele Corso">
-          </center>
-          <h4 class="section-heading">
-              <center>
-                Gabriele Corso<br>
-                <i><font size="3">MIT</font></i>
-              </center>
-            </h4>
-        </div>
-        <div class="col-sm-4 wow fadeInRightBig"  data-animation-delay="200">
-          <center>
-            <img  class="magnify img-responsive img-rounded" style="border-radius: 50%" height="180" width="180" src="img/organizer/gina_elnesr.png" alt="Photo of Gina El Nesr">
-          </center>
-          <h4 class="section-heading">
-              <center>
-                Gina El Nesr<br>
-                <i><font size="3">Stanford University</font></i>
-              </center>
-            </h4>
-        </div>
-        <div class="col-sm-4 wow fadeInRightBig"  data-animation-delay="200">
-          <center>
-            <img  class="magnify img-responsive img-rounded" style="border-radius: 50%" height="180" width="180" src="img/organizer/vignesh.png" alt="Photo of Vignesh Ram Somnath">
-          </center>
-          <h4 class="section-heading">
-              <center>
-                Vignesh Ram Somnath<br>
-                <i><font size="3">ETH Zurich</font></i>
-              </center>
-            </h4>
-        </div>
-        </div>
 
-        <div class="col-sm-6 wow fadeInRightBig"  data-animation-delay="200">
-          <center>
-            <img  class="magnify img-responsive img-rounded" style="border-radius: 50%" height="180" width="180" src="img/organizer/zeming_lin.jpg" alt="Photo of Ellen Zhong">
-          </center>
-          <h4 class="section-heading">
-            <center>
-                Zeming Lin<br>
-              <i><font size="3">EvolutionaryScale</font></i>
-            </center>
-          </h4>
-        </div>
+  </div>
+
+
+<div id ="challenge" class="content-section-b">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 wow fadeInRightBig" data-animation-delay="200">
+        <h2 class="section-heading">Challenge 2024</h2>
+        <p>This year we are running a challenge on the <a href="https://pinder.sh">Pinder</a> and <a href="https://plinder.sh">Plinder</a> datasets to evaluate how well the community is currently doing for protein-protein interaction prediction and protein-ligand complex prediction. </p>
+        <h3 class="section-heading">Details of the challenge</h3>
         
-          <div class="col-sm-4 wow fadeInRightBig"  data-animation-delay="200">
-            <center>
-              <img  class="magnify img-responsive img-rounded" style="border-radius: 50%" height="180" width="180" src="img/organizer/simon_duerr.png" alt="Photo of Simon Duerr">
-            </center>
-            <h4 class="section-heading">
-              <center>
-                Simon Duerr<br>
-                <i><font size="3">EPFL</font></i>
-              </center>
-            </h4>
-          </div>
-        </div>
+        <p>
+        <ul class="bulleted">
+        <li>Two leaderboards, one for each of PINDER and PLINDER, will be created using a single evaluation set for each.</li>
+          <li>Evaluation sets will be subsets of 150-200 structures from the current PINDER and PLINDER test splits, designed for reasonable evaluation runtimes.</li>
+            <li>Each evaluation sample will contain a pre-defined input/output to ensure performance assessment is model-dependent, not input-dependent.
+        Inputs will be as follows:
+        <ul class="bulleted"><li>
+        PLINDER: <code>(SMILES, monomer protein structure, monomer FASTA)</code></li>
+        <li>PINDER: <code>(monomer protein structure 1, monomer protein structure 2, FASTA 1, FASTA 2)</code></li>
+        </ul>
+            </li>
+        <li>The focus will be exclusively on flexible docking/co-folding, with a single canonical structure per protein, sampled from apo and predicted structures.</li>
+        <li>Monomer input structures will be sampled from paired structures available in PINDER/PLINDER, balanced between apo and predicted structures and stratified by "flexibility" level according to specified conformational difference thresholds.</li>
+        <li>No binding site information or alternative input structures may be used.</li>
+          </ul>
+        </p>
 
-        <div class="row">
-          
-          <div class="col-sm-6 wow fadeInRightBig"  data-animation-delay="200">
-            <center>
-              <img  class="magnify img-responsive img-rounded" style="border-radius: 50%" height="180" width="180" src="img/organizer/hannah_wayment_steele.png" alt="Photo of Hannah Wayment-Steele">
-            </center>
-            <h4 class="section-heading">
-              <center>
-                Hannah Wayment-Steele<br>
-                <i><font size="3">University of Wisconsin–Madison</font></i>
-              </center>
-            </h4>
-          </div>
+        <p> Please find the technical documentation for how to use the datasets for the challenge:
+        <ul class="bulleted">
+          <li><a href="https://pinder-org.github.io/pinder/pinder-mlsb.html">PINDER</a></li>
+          <li><a href="https://github.com/plinder-org/plinder/blob/mlsb_tutorial/docs/examples/data-access.ipynb">PLINDER</a></li>
+        </ul>  
+        </p>
+        <p>To submit your trained model you will need to make an inference docker image on HuggingFace Spaces using the following templates:
+          <ul class="bulleted">
+            <li><a href="https://huggingface.co/spaces/MLSB/pinder_inference_template">Pinder inference template</a></li>
+            <li><a href="https://huggingface.co/spaces/MLSB/plinder_inference_template">Plinder inference template</a></li>
+          </ul>
 
-          <div class="row">
-            <div class="col-sm-4 wow fadeInRightBig"  data-animation-delay="200">
-              <center>
-                <img  class="magnify img-responsive img-rounded" style="border-radius: 50%" height="180" width="180" src="img/organizer/sergey.jpg" alt="Photo of Sergey Ovchinnikov">
-              </center>
-              <h4 class="section-heading">
-                <center>
-                  Sergey Ovchinnikov<br>
-                  <i><font size="3">MIT</font></i>
-                </center>
-              </h4>
-            </div>
+        </p>
 
-      </div>
-        </div>
+        <h3 class="section-heading"> General rules</h3>
+        <p>
+        <ul class="bulleted">
+        <li>Participants must use the provided train and validation sets from PINDER and PLINDER; no data augmentation is allowed.</li>
+          <li>The PINDER and PLINDER datasets should be used independently; combining the sets is considered augmentation and is not allowed.</li>
+            <li>For inference, only the canonical sequences and structures in the evaluation sets may be used; no alternate templates or sequences are permitted.</li>
+              <li>Model selection must be performed exclusively on the validation set designed for this purpose within the PINDER and PLINDER datasets.</li>
+                <li>Methods relying on any model derivatives or embeddings trained on structures outside the PINDER/PLINDER training set are not permitted (e.g., ESM2, MSA: allowed; ESM3/ESMFold/SAProt: not allowed).</li>
+        </ul>
+        </p>
+
+        <h3 class="section-heading"> Rules for valid inference pipeline </h3>
+        <p>
+          <ul class="bulleted">
+            <li>Using additional template structures or sequences is NOT allowed </li>
+<li>No binding site information can be used</li>
+<li>For each system, you are allowed to submit at most 1 prediction! If your method produces multiple samples, you must rank/score the predictions and only supply a single prediction as the top-ranking prediction that will be used in the leaderboard.</li>
+<li>Model inference should run in under 10 minutes per system on a GPU like T4, A10G</li>
+<li>The final predictions must be in PDB file format and contain two chains: Receptor (chain R) and Ligand (chain L)</li>
+<li>Systems without a valid prediction will be penalized.</li>
+
+
+        <h3 class="section-heading">How to submit and view results</h3>
+        <iframe
+        src="https://mlsb-leaderboard2024.hf.space"
+        frameborder="0"
+        width="100%"
+        height="700px"
+      ></iframe>
+        
+        <h3 class="section-heading">Metrics</h3>
+Primary Ranking Metric:
+<ul class="bulleted">
+<li>PLINDER: LDDT-PLI</li>
+<li>PINDER: Percent CAPRI acceptable or higher</li>
+</ul>
+<p>Other metrics computed by PINDER/PLINDER will be displayed on the leaderboard but will not influence the ranking.</p>
+<p>The winners will be invited to present their work at the MLSB workshop.</p>
+        
+        <h3 class="section-heading">Key Dates</h3>
+
+
+        <p class=""><u>Training workshop</u> September 24th, 2024, virtual (<a href="https://unibas.zoom.us/meeting/register/u5EkcOusrzsiHtLDImocB5PM0RLK9vC-g-kW#/registration">Register here</a>)</p>
+<p><u>Leaderboard Opens:</u> October 9th, 2024 (following acceptance notifications for MLSB).</p>
+<p><u>Leaderboard Closes:</u> November 9th, 2024 </p>
+<p><u>Winner Notification:</u> Wednesday, November 27th, 2024 </p>
+
+<div class="img-thumbnail">
+
+  <img alt="" width="150px"  loading="lazy" src="https://plinder.sh/icons/vantai_logo.svg" style="color: transparent; padding:20px">
+
+  
+  <img alt="" width="150px" class="p-3" src="https://plinder.sh/_next/image?url=%2Ficons%2Fnvidia.png&amp;w=3840&amp;q=75" style="padding:20px" >
+  
+  <img alt="" width="150px"   src="https://plinder.sh/icons/swiss_institute_of_bioinformatics.svg" style="color: transparent; padding:20px"><img alt="" width="150px"  src="https://plinder.sh/_next/image?url=%2Ficons%2Fbiozentrum.png&amp;w=3840&amp;q=75" style="color: transparent;padding:20px">
+   
+  
+
+  <img alt="" class="img-fluid p-3" width="150px" loading="lazy" src="https://plinder.sh/_next/image?url=%2Ficons%2Funiversity_of_basel.png&amp;w=3840&amp;q=75" style="color: transparent; padding:20px">
+    
+  <img alt="" class="p-3" width="150px" src="https://plinder.sh/_next/image?url=%2Ficons%2Fmit_csail.png&amp;w=3840&amp;q=75" style="color: transparent;padding:20px"><img alt="" width="150px"  src="https://plinder.sh/_next/image?url=%2Ficons%2Fmit.png&amp;w=3840&amp;q=75" style="color: transparent;"><img  width="150px" class="p-3" src="https://plinder.sh/_next/image?url=%2Ficons%2Feuro_hpc.webp&amp;w=3840&amp;q=75" style="color: transparent; padding:20px"><img width="100px" src="https://plinder.sh/_next/image?url=%2Ficons%2Feuropean_commission.png&amp;w=3840&amp;q=75" style="color: transparent;">
+  <img src="https://huggingface.co/datasets/huggingface/brand-assets/resolve/main/hf-logo-with-title.svg" alt="HuggingFace" width="200px" style="padding:20px">
+     
+</div>
+
       </div>
     </div>
   </div>
+</div> 
 
+<div id="organizers" class="content-section-a" style="border-top: 0">
+  <div class="container">
+    <h2 class="section-heading">Organizers</h2>
+    <div class="row wow fadeInRightBig"  data-animation-delay="200">
+      <div class="row">
+      <div class="col-sm-4 wow fadeInRightBig"  data-animation-delay="200">
+        <center>
+          <img  class="magnify img-responsive img-rounded" style="border-radius: 50%" height="180" width="180" src="img/organizer/gabriele_corso.png" alt="Photo of Gabriele Corso">
+        </center>
+        <h4 class="section-heading">
+            <center>
+              Gabriele Corso<br>
+              <i><font size="3">MIT</font></i>
+            </center>
+          </h4>
+      </div>
+      <div class="col-sm-4 wow fadeInRightBig"  data-animation-delay="200">
+        <center>
+          <img  class="magnify img-responsive img-rounded" style="border-radius: 50%" height="180" width="180" src="img/organizer/gina_elnesr.png" alt="Photo of Gina El Nesr">
+        </center>
+        <h4 class="section-heading">
+            <center>
+              Gina El Nesr<br>
+              <i><font size="3">Stanford University</font></i>
+            </center>
+          </h4>
+      </div>
+      <div class="col-sm-4 wow fadeInRightBig"  data-animation-delay="200">
+        <center>
+          <img  class="magnify img-responsive img-rounded" style="border-radius: 50%" height="180" width="180" src="img/organizer/vignesh.png" alt="Photo of Vignesh Ram Somnath">
+        </center>
+        <h4 class="section-heading">
+            <center>
+              Vignesh Ram Somnath<br>
+              <i><font size="3">ETH Zurich</font></i>
+            </center>
+          </h4>
+      </div>
+      </div>
+
+      <div class="col-sm-6 wow fadeInRightBig"  data-animation-delay="200">
+        <center>
+          <img  class="magnify img-responsive img-rounded" style="border-radius: 50%" height="180" width="180" src="img/organizer/zeming_lin.jpg" alt="Photo of Ellen Zhong">
+        </center>
+        <h4 class="section-heading">
+          <center>
+              Zeming Lin<br>
+            <i><font size="3">EvolutionaryScale</font></i>
+          </center>
+        </h4>
+      </div>
+      
+        <div class="col-sm-4 wow fadeInRightBig"  data-animation-delay="200">
+          <center>
+            <img  class="magnify img-responsive img-rounded" style="border-radius: 50%" height="180" width="180" src="img/organizer/simon_duerr.png" alt="Photo of Simon Duerr">
+          </center>
+          <h4 class="section-heading">
+            <center>
+              Simon Duerr<br>
+              <i><font size="3">EPFL</font></i>
+            </center>
+          </h4>
+        </div>
+      </div>
+
+      <div class="row">
+        
+        <div class="col-sm-6 wow fadeInRightBig"  data-animation-delay="200">
+          <center>
+            <img  class="magnify img-responsive img-rounded" style="border-radius: 50%" height="180" width="180" src="img/organizer/hannah_wayment_steele.png" alt="Photo of Hannah Wayment-Steele">
+          </center>
+          <h4 class="section-heading">
+            <center>
+              Hannah Wayment-Steele<br>
+              <i><font size="3">University of Wisconsin–Madison</font></i>
+            </center>
+          </h4>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-4 wow fadeInRightBig"  data-animation-delay="200">
+            <center>
+              <img  class="magnify img-responsive img-rounded" style="border-radius: 50%" height="180" width="180" src="img/organizer/sergey.jpg" alt="Photo of Sergey Ovchinnikov">
+            </center>
+            <h4 class="section-heading">
+              <center>
+                Sergey Ovchinnikov<br>
+                <i><font size="3">MIT</font></i>
+              </center>
+            </h4>
+          </div>
+
+    </div>
+      </div>
+    </div>
+  </div>
 
 	<div id="related" class="content-section-b" style="border-top: 0">
         <div class="container" id="related">
