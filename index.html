@@ -1126,29 +1126,8 @@ function showhide(id) {
         <h3 class="section-heading">Details of the challenge</h3>
         
         <p>
-        <ul class="bulleted">
-        <li>Two leaderboards, one for each of PINDER and PLINDER, will be created using a single evaluation set for each.</li>
-          <li>Evaluation sets will be subsets of 150-200 structures from the current PINDER and PLINDER test splits, designed for reasonable evaluation runtimes.</li>
-            <li>Each evaluation sample will contain a pre-defined input/output to ensure performance assessment is model-dependent, not input-dependent.
-        Inputs will be as follows:
-        <ul class="bulleted"><li>
-        PLINDER: <code>(SMILES, monomer protein structure, monomer FASTA)</code></li>
-        <li>PINDER: <code>(monomer protein structure 1, monomer protein structure 2, FASTA 1, FASTA 2)</code></li>
-        </ul>
-            </li>
-        <li>The focus will be exclusively on flexible docking/co-folding, with a single canonical structure per protein, sampled from apo and predicted structures.</li>
-        <li>Monomer input structures will be sampled from paired structures available in PINDER/PLINDER, balanced between apo and predicted structures and stratified by "flexibility" level according to specified conformational difference thresholds.</li>
-        <li>No binding site information or alternative input structures may be used.</li>
-          </ul>
-        </p>
-
-        <p> Please find the technical documentation for how to use the datasets for the challenge:
-        <ul class="bulleted">
-          <li><a href="https://pinder-org.github.io/pinder/pinder-mlsb.html">PINDER</a></li>
-          <li><a href="https://plinder-org.github.io/plinder/examples/mlsb_data_access.html">PLINDER</a></li>
-          
-        </ul>  
-        </p>
+        
+        
         <p>To submit your trained model you will need to make an inference docker image on HuggingFace Spaces using the following templates:
           <ul class="bulleted">
             <li><a href="https://huggingface.co/spaces/MLSB/pinder_inference_template">Pinder inference template</a></li>
@@ -1157,26 +1136,59 @@ function showhide(id) {
 
         </p>
 
-        <h3 class="section-heading"> General rules</h3>
+        <h3 class="section-heading"> Rules for model training</h3>
         <p>
         <ul class="bulleted">
-        <li>Participants must use the provided train and validation sets from PINDER and PLINDER; no data augmentation is allowed.</li>
+        <li>Participants MUST use the sequences and SMILES in the provided train and validation sets from PINDER or PLINDER. In order to ensure no leakage, external data augmentation is not allowed.</li>
+          <li>If starting structures/conformations need to be generated for the model, then this can only be done from the training and validation sequences and SMILES. Note that this is only the case for train & validation - no external folding methods or starting structures are allowed for the test set under any circumstance!. Only the predicted structures/conformers themselves may be used in this way, the embeddings or models used to generate such predictions may not. E.g. it is not valid to “distill” a method that was not trained on PLINDER/PINDER</li>
           <li>The PINDER and PLINDER datasets should be used independently; combining the sets is considered augmentation and is not allowed.</li>
-            <li>For inference, only the canonical sequences and structures in the evaluation sets may be used; no alternate templates or sequences are permitted.</li>
+
+            <li>For inference, only the inputs provided in the evaluation sets may be used: canonical sequences, structures and MSAs; no alternate templates or sequences are permitted. The inputs that will be used by assessors for each challenge track is as follows: 
+              <ul class="bulleted">
+                <li>PLINDER: <code>(SMILES, monomer protein structure, monomer FASTA, monomer MSA)</code></li>
+                <li>PINDER: <code>(monomer protein structure 1, monomer protein structure 2, FASTA 1, FASTA 2, MSA 1, MSA 2)</code></li>
+              </ul>
+            </li>
               <li>Model selection must be performed exclusively on the validation set designed for this purpose within the PINDER and PLINDER datasets.</li>
-                <li>Methods relying on any model derivatives or embeddings trained on structures outside the PINDER/PLINDER training set are not permitted (e.g., ESM2, MSA: allowed; ESM3/ESMFold/SAProt: not allowed).</li>
+                <li>Methods relying on any model derivatives or embeddings trained on structures outside the PINDER/PLINDER training set are not permitted (e.g., ESM2, MSA: allowed; ESM3/ESMFold/SAProt/UniMol: not allowed).</li>
         </ul>
         </p>
+        <p> Please find the technical documentation for how to use the datasets for the challenge:
+          <ul class="bulleted">
+            <li><a href="https://pinder-org.github.io/pinder/pinder-mlsb.html">PINDER</a></li>
+            <li><a href="https://plinder-org.github.io/plinder/examples/mlsb_data_access.html">PLINDER</a></li>
+            
+          </ul>  
+          </p>
 
         <h3 class="section-heading"> Rules for valid inference pipeline </h3>
+
+        <p>Submission system will use Hugging Face Spaces. To qualify for submission, each team must:</p>
         <p>
           <ul class="bulleted">
-            <li>Using additional template structures or sequences is NOT allowed </li>
-<li>No binding site information can be used</li>
-<li>For each system, you are allowed to submit at most 1 prediction! If your method produces multiple samples, you must rank/score the predictions and only supply a single prediction as the top-ranking prediction that will be used in the leaderboard.</li>
-<li>Model inference should run in under 10 minutes per system on a GPU like T4, A10G</li>
-<li>The final predictions must be in PDB file format and contain two chains: Receptor (chain R) and Ligand (chain L)</li>
-<li>Systems without a valid prediction will be penalized.</li>
+            <li>Provide an MLSB submission ID or a link to a preprint/paper describing their methodology. This publication does not have to specifically report training or evaluation on the P(L)INDER dataset. Previously published methods, such as DiffDock, only need to link their existing paper. Note that entry into this competition does not equate to an MLSB workshop paper submission.</li>
+<li>Create a copy of the provided inference template.
+
+  Go to the top right corner of the page and click on the drop-down menu (vertical ellipsis) right next to the “Community”, then select “Duplicate this space”.
+</li>
+<li>Change files in the newly create space to reflect the peculiarities of your model 
+<ul class="bulleted">
+  <li>Edit <code>requirements.txt</code> to capture all dependencies.</li>
+  <li>Include a <code>inference_app.py</code> file. This contains a <code>predict</code> function that should be modified to reflect the specifics of inference using their model.</li>
+<li>Include a <code>train.py</code> file to ensure that training and model selection use only the PINDER/PLINDER datasets and to clearly show any additional hyperparameters used.</li>
+<li>Provide a LICENSE file that allows for reuse, derivative works, and distribution of the provided software and weights (e.g., MIT or Apache2 license).</li>
+<li>Modify the Dockerfile as appropriate (including selecting the right base image)</li>
+</ul>
+
+</li>
+<li>Submit to the leaderboard via the <a href="https://huggingface.co/spaces/MLSB/leaderboard2024" rel="nofollow">designated form</a>.
+  <ul dir="auto">
+  <li>On submission page, add reference to the newly created space in the format username/space (e.g mlsb/alphafold3)</li>
+  </ul>
+  </li>
+
+
+
 
 
         <h3 class="section-heading">How to submit and view results</h3>
@@ -1190,11 +1202,23 @@ function showhide(id) {
         <h3 class="section-heading">Metrics</h3>
 Primary Ranking Metric:
 <ul class="bulleted">
-<li>PLINDER: LDDT-PLI</li>
-<li>PINDER: Percent CAPRI acceptable or higher</li>
+<li>PLINDER: lDDT-PLI</li>
+<li>PINDER: DockQ</li>
 </ul>
 <p>Other metrics computed by PINDER/PLINDER will be displayed on the leaderboard but will not influence the ranking.</p>
 <p>The winners will be invited to present their work at the MLSB workshop.</p>
+
+<h3 class="section-heading">Evaluation Datasets</h3>
+
+<p>Although the exact composition of the eval set will be shared at a future date, below we provide an overview of the dataset and what to expect</p>
+
+<p><ul class="bulleted">
+  <li>Two leaderboards, one for each of PINDER and PLINDER, will be created using a single evaluation set for each.</li>
+  <li>Evaluation sets will be subsets of 150-200 structures from the current PINDER and PLINDER test splits (subsets to enable reasonable eval runtime).</li>
+  <li>Each evaluation sample will contain a predefined input/output to ensure performance assessment is model-dependent, not input-dependent.</li>
+  <li>The focus will be exclusively on flexible docking/co-folding, with a single canonical structure per protein, sampled from apo and predicted structures.</li>
+  <li>Monomer input structures will be sampled from paired structures available in PINDER/PLINDER, balanced between apo and predicted structures and stratified by "flexibility" level according to specified conformational difference thresholds.</li>
+  </ul></p>
         
         <h3 class="section-heading">Key Dates</h3>
 
