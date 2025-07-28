@@ -4,14 +4,22 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Menu, X } from "lucide-react"
 import Link from "next/link"
+
 import { usePathname } from "next/navigation"
 import { useState } from "react"
 
-export default function Navbar() {
+interface NavbarProps {
+  highlight?: string;
+}
+
+
+export default function Navbar({ highlight }: NavbarProps) {
   const pathname = usePathname()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  const isActive = (path: string) => pathname === path
+  // Use highlight prop if provided, otherwise use pathname
+  const activePath = highlight ? `/${highlight}` : pathname;
+  const isActive = (path: string) => activePath === path;
 
   return (
     <nav className="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
