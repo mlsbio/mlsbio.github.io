@@ -6,9 +6,8 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start",
-    "export": "next export"
-  },
+    "start": "next start"
+    },
   "dependencies": {
     "@google-cloud/storage": "latest",
     "@hookform/resolvers": "^3.9.1",
