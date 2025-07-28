@@ -30,6 +30,8 @@ jobs:
         run: pnpm install
       - name: Build
         run: pnpm run build
+      - name: LS
+        run: ls 
       - name: Move out folder to current directory
         run: mv out/* . 
 
