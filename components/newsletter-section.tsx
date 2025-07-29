@@ -10,7 +10,7 @@ export default function NewsletterSection() {
           <div className="max-w-2xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-4">Stay Updated</h2>
             <p className="text-blue-100 mb-8 text-lg">
-              Join our Google Group to receive the latest updates about MLSB 2025
+              Join our Google Group to receive the latest updates about MLSB 2025.
             </p>
             <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-blue-50" asChild>
               <Link href="https://groups.google.com/g/workshopmlsb" target="_blank">
