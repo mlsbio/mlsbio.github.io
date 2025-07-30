@@ -26,7 +26,7 @@ export default function Navbar({ highlight }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
            <Link href="/" className="flex items-center space-x-2">
-            <img src="/mlsb.png" alt="MLSB Logo" className="h-12" />
+            <img src="/mlsb.svg" alt="MLSB Logo" className="h-12" />
           </Link>
 
           {/* Desktop Menu */}
