@@ -95,9 +95,11 @@ export default function Navbar({ highlight }: NavbarProps) {
             <div className="flex flex-col space-y-4">
                <a
               href="/#speakers"
-              className={`transition-colors ${
-                isActive("/") ? "text-blue-600 font-medium" : "text-slate-600 hover:text-blue-600"
-              }`}
+             className={`px-4 py-2 rounded-md transition-colors ${
+                  isActive("/")
+                    ? "text-blue-600 font-medium bg-blue-50"
+                    : "text-slate-600 hover:text-blue-600 hover:bg-slate-50"
+                }`}
             >
               Speakers
             </a>
