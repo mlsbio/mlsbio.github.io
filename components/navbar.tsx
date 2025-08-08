@@ -31,6 +31,14 @@ export default function Navbar({ highlight }: NavbarProps) {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-6">
+             <a
+              href="/#speakers"
+              className={`transition-colors ${
+                isActive("/") ? "text-blue-600 font-medium" : "text-slate-600 hover:text-blue-600"
+              }`}
+            >
+              Speakers
+            </a>
             <Link
               href="/schedule"
               className={`transition-colors ${
@@ -85,6 +93,14 @@ export default function Navbar({ highlight }: NavbarProps) {
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 py-4 border-t border-slate-200">
             <div className="flex flex-col space-y-4">
+               <a
+              href="/#speakers"
+              className={`transition-colors ${
+                isActive("/") ? "text-blue-600 font-medium" : "text-slate-600 hover:text-blue-600"
+              }`}
+            >
+              Speakers
+            </a>
               <Link
                 href="/schedule"
                 className={`px-4 py-2 rounded-md transition-colors ${
