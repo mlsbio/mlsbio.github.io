@@ -220,7 +220,7 @@ export default function MLSBLandingPage() {
       </section>
 
       {/* Featured Speakers */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-slate-50" id="speakers">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-slate-800 mb-4">Invited Speakers</h2>
