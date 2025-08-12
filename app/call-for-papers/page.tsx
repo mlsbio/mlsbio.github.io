@@ -59,7 +59,7 @@ export default function CallForPapersPage() {
             Submit your latest research at the intersection of machine learning and structural biology.
           </p>
           <Badge className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 text-lg">
-            Deadline: September 30, 2025
+            Deadline: September 26, 2025
           </Badge>
         </div>
       </section>
@@ -136,7 +136,7 @@ export default function CallForPapersPage() {
             </CardHeader>
             <CardContent className="prose">
           <p className="py-2">
-          We request anonymized PDF submissions by September 30, 2025, at 11:59PM, AoE (anywhere on earth) through our submission website on <a className="text-blue-400 hover:text-blue-300" href="https://cmt3.research.microsoft.com/MLSB2025">CMT</a>.
+          We request anonymized PDF submissions by September 26, 2025, at 11:59PM, AoE (anywhere on earth) through our submission website on <a className="text-blue-400 hover:text-blue-300" href="https://cmt3.research.microsoft.com/MLSB2025">CMT</a>.
           </p>
 
           <p className="py-2">Papers should present novel work that has not been previously accepted at an archival venue at the time of submission. Submissions should be a maximum of 5 pages (excluding references and appendices) in PDF format, using the <a className="text-blue-400 hover:text-blue-300" href="https://mlsb.io/neurips_mlsb_2024.sty">NeurIPS style files</a>, and fully anonymized as per the requirements of NeurIPS. The NeurIPS checklist can be omitted from the submission. Submissions meeting these criteria will go through a light, double-blind review process. Reviewer comments will be returned to the authors as feedback.
