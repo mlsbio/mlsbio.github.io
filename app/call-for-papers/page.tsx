@@ -42,7 +42,7 @@ export default function CallForPapersPage() {
     { event: "Paper Submission Deadline", date: "September 26, 2025 AoE", highlight: true },
     { event: "Notification of Acceptance", date: "October 15, 2025", highlight: false },
     { event: "Camera-Ready Deadline", date: "December 1, 2025 AoE", highlight: false },
-    { event: "Conference Date", date: "December 6 or 7, 2025", highlight: false },
+    { event: "Conference Date", date: "December 7, 2025", highlight: false },
   ]
 
   return (
