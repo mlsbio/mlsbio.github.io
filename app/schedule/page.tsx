@@ -63,7 +63,7 @@ export default function SchedulePage() {
                   <div className="space-y-2 text-slate-600">
                     <div className="flex justify-between">
                       <span>Date:</span>
-                      <span className="font-semibold">December 6 or 7, 2025</span>
+                      <span className="font-semibold">December 7, 2025</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Time:</span>
