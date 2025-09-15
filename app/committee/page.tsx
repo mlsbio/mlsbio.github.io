@@ -1,13 +1,14 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Mail } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
 import Navbar from "@/components/navbar"
 import SponsorsSection from "@/components/sponsors-section"
 import NewsletterSection from "@/components/newsletter-section"
+import { Calendar, MapPin, FileText, Mail, ExternalLink } from "lucide-react"
+
 
 export default function CommitteePage() {
   const organizers = [
@@ -54,6 +55,43 @@ export default function CommitteePage() {
       bio: "",
     },
   ]
+  const organizerseu = [
+    {
+      name: "Nele Quast",
+      affiliation: "University of Oxford",
+      role: "",
+      image: "/organizer/nele.jfif",
+      bio: "",
+    },
+    {
+      name: "Jonathan Ziegler",
+      affiliation: "Cradle",
+      role: "",
+      image: "/organizer/jonathan.png",
+      bio: "",
+    },
+    {
+      name: "Johanna Haffner",
+      affiliation: "ETH Zurich",
+      role: "",
+      image: "/organizer/johanna.jfif",
+      bio: "",
+    },
+    {
+      name: "Nissrine Hatibi",
+      affiliation: "ENSIAS",
+      role: "",
+      image: "/organizer/nissrine.jfif",
+      bio: "",
+    },
+    {
+      name: "Simon Duerr",
+      affiliation: "HES-SO Valais-Wallis",
+      role: "",
+      image: "/organizer/simon.jpg",
+      bio: "",
+    }
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -62,20 +100,60 @@ export default function CommitteePage() {
       <Navbar highlight="committee" />
 
       {/* Header */}
-      <section className="py-8 px-4">
+      <section className="pt-8 pb-3 px-4">
         <div className="container mx-auto text-center">
-          <h1 className="text-5xl font-bold text-slate-800 mb-4">Organizing Committee</h1>
-          <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
-            
-          </p>
+          <h1 className="text-2xl font-bold text-slate-800 mb-2">Organizing Committee</h1>
+          <div className="mx-auto max-w-xl flex justify-center">
+           <span className="flex items-center text-xl mt-2 space-x-1 text-blue-600 font-semibold"> <MapPin className="w-5 h-5" /> <span>San Diego, US</span> </span>
+
+          </div>
+           
         </div>
       </section>
 
       {/* Committee Members */}
+      <section className="py-2 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3">
+            {organizers.map((member, index) => (
+              <Card key={index} className="bg-white hover:shadow-lg transition-shadow duration-300">
+                <CardContent className="p-6 text-center">
+                  <div className="relative w-32 h-32 mx-auto mb-4">
+                    <Image
+                      src={member.image || "/placeholder.svg"}
+                      alt={member.name}
+                      fill
+                      className="rounded-full object-cover"
+                    />
+                  </div>
+                  <h3 className="font-bold text-lg text-slate-800 mb-1">{member.name}</h3>
+                  {/*<p className="text-blue-600 font-medium mb-2"></p>*/}
+                  <p className="text-sm font-semibold text-slate-700 mb-3 bg-slate-100 px-2 py-1 rounded">
+                    {member.affiliation}
+                  </p>
+                  {/*<p className="text-sm text-slate-600 leading-relaxed">{member.bio}</p>*/}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+       <section className="pt-8 pb-3 px-4">
+        <div className="container mx-auto text-center">
+          <h1 className="text-2xl font-bold text-slate-800 mb-2">Organizing Committee</h1>
+          <div className="mx-auto max-w-xl flex justify-center">
+           <span className="flex items-center text-xl mt-2 space-x-1 text-red-600 font-semibold"> <MapPin className="w-5 h-5" /> <span>Copenhagen, DK</span> </span>
+
+          </div>
+           
+        </div>
+      </section>
+
       <section className="py-8 px-4">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {organizers.map((member, index) => (
+          <div className="grid md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+            {organizerseu.map((member, index) => (
               <Card key={index} className="bg-white hover:shadow-lg transition-shadow duration-300">
                 <CardContent className="p-6 text-center">
                   <div className="relative w-32 h-32 mx-auto mb-4">

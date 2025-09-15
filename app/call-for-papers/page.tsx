@@ -39,7 +39,7 @@ export default function CallForPapersPage() {
   ]
 
   const importantDates = [
-    { event: "Paper Submission Deadline", date: "September 26, 2025 AoE", highlight: true },
+    { event: "Paper Submission Deadline", date: "October 1, 2025 AoE", highlight: true },
     { event: "Notification of Acceptance", date: "October 15, 2025", highlight: false },
     { event: "Camera-Ready Deadline", date: "December 1, 2025 AoE", highlight: false },
     { event: "Conference Date", date: "December 7, 2025", highlight: false },
@@ -58,9 +58,13 @@ export default function CallForPapersPage() {
           <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
             Submit your latest research at the intersection of machine learning and structural biology.
           </p>
+          <p className="py-3 font-semibold text-base text-slate-700 max-w-3xl mx-auto">
+          Both venues (MLSB and EuroMLSB) share a common submission portal and a venue preference can be given at the time of submission. Note, that simultaneous submission to both venues is possible if one of the authors can commit to attend each venues in person.
+          </p>
           <Badge className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 text-lg">
-            Deadline: September 26, 2025
+            Deadline:  October 1, 2025 AoE
           </Badge>
+          <div> <span className="line-through px-2">September 26, 2025</span></div>
         </div>
       </section>
 
@@ -136,7 +140,7 @@ export default function CallForPapersPage() {
             </CardHeader>
             <CardContent className="prose">
           <p className="py-2">
-          We request anonymized PDF submissions by September 26, 2025, at 11:59PM, AoE (anywhere on earth) through our submission website on <a className="text-blue-400 hover:text-blue-300" href="https://cmt3.research.microsoft.com/MLSB2025">CMT</a>.
+          We request anonymized PDF submissions by <span className="line-through">September 26, 2025</span> October 1, 2025, at 11:59PM, AoE (anywhere on earth) through our submission website on <a className="text-blue-400 hover:text-blue-300" href="https://cmt3.research.microsoft.com/MLSB2025">CMT</a>.
           </p>
 
           <p className="py-2">Papers should present novel work that has not been previously accepted at an archival venue at the time of submission. Submissions should be a maximum of 5 pages (excluding references and appendices) in PDF format, using the <a className="text-blue-400 hover:text-blue-300" href="https://mlsb.io/neurips_mlsb_2024.sty">NeurIPS style files</a>, and fully anonymized as per the requirements of NeurIPS. The NeurIPS checklist can be omitted from the submission. Submissions meeting these criteria will go through a light, double-blind review process. Reviewer comments will be returned to the authors as feedback.

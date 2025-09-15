@@ -28,8 +28,8 @@ export default function NewsletterSection() {
               <div className="flex items-center space-x-2 mb-4">
                 <span className="text-xl font-bold">MLSB 2025</span>
               </div>
-              <p className="text-slate-300">
-                Machine Learning in Structural Biology Workshop <br /> co-located with NeurIPS 2025. <br /> Note, that this workshop is not affiliated with NeurIPS.
+              <p className="text-slate-300 text-sm">
+                Machine Learning in Structural Biology Workshop <br /> in two venues. The US venue is co-located with NeurIPS 2025 in San Diego. The EU version is an official EurIPS workshop in Copenhagen. <br /><br /> Note, that the US workshop is not affiliated with NeurIPS.
               </p>
             </div>
             <div>

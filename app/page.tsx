@@ -53,12 +53,64 @@ export default function MLSBLandingPage() {
       expertise: "Molecular Simulation",
       image: "/speakers/pratyush.jpg",
     },
+     {
+      name: "CASP Organizers",
+      affiliation: "U Maryland, UC Davis",
+      expertise: "Structure Prediction",
+      image: "/speakers/casp.gif",
+    },
   //  {
   //    name: "Anastassia Vorobieva",
   //    affiliation: "VIB-VUB Center for Structural Biology",
   //    expertise: "Protein Design",
   //    image: "/speakers/anastassia.png",
   //  },
+
+  ]
+
+  const speakers_eu = [
+   {
+     name: "Anastassia Vorobieva",
+     affiliation: "VIB",
+     expertise: "Protein Design",
+     image: "/speakers/anastassia.png",
+   },
+   {
+     name: "Patrick Bryant",
+     affiliation: "Stockholm University",
+     expertise: "",
+     image: "/speakers/patrick.jpg",
+   },
+   {
+     name: "Harris Saeed",
+     affiliation: "University of Oxford",
+     expertise: "",
+     image: "",
+   },
+   {
+     name: "Paolo Marcatili",
+     affiliation: "Novo Nordisk",
+     expertise: "",
+     image: "/speakers/paolo.jpg",
+   },
+   {
+     name: "Julian Englert",
+     affiliation: "AdaptyvBio",
+     expertise: "Lab Automation",
+     image: "/speakers/julian.png",
+   },
+   {
+     name: "Constance Ferragu",
+     affiliation: "Cradle",
+     expertise: "",
+     image: "/speakers/constance.png",
+   },
+   {
+     name: "Charlie Harris",
+     affiliation: "UK Government Sovereign AI",
+     expertise: "",
+     image: "/speakers/charlie.png",
+   }
 
   ]
 
@@ -88,6 +140,12 @@ export default function MLSBLandingPage() {
                 >
                   Co-located with NeurIPS 2025
                 </Badge>
+                 <Badge
+                  variant="outline"
+                  className="ml-4 bg-gradient-to-r from-red-600 to-purple-600 text-white border-0 px-4 py-2"
+                >
+                  EurIPS 2025
+                </Badge>
               </div>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-800 mb-6 leading-tight">
                 Machine Learning in
@@ -99,7 +157,11 @@ export default function MLSBLandingPage() {
                 Join leading researchers at the intersection of machine learning and structural biology and explore
                 cutting-edge advances in predictive modelling and design of biological macromolecules.
               </p>
-              <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start gap-6 mb-8">
+              <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start gap-6 mb-2">
+                <div className="flex items-center">
+                  <svg  viewBox="0 0 130 120" enableBackground="new 0 0 130 120"  fill="#000000" className="h-5 w-5"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Infos"> <rect id="BG" x="-200" y="-1350" fill="#D8D8D8" width="2180" height="1700"></rect> </g> <g id="Others"> <g> <rect y="0" fill="#DC4437" width="130" height="13.3"></rect> <rect y="26.7" fill="#DC4437" width="130" height="13.3"></rect> <rect y="80" fill="#DC4437" width="130" height="13.3"></rect> <rect y="106.7" fill="#DC4437" width="130" height="13.3"></rect> <rect y="53.3" fill="#DC4437" width="130" height="13.3"></rect> <rect y="13.3" fill="#FFFFFF" width="130" height="13.3"></rect> <rect y="40" fill="#FFFFFF" width="130" height="13.3"></rect> <rect y="93.3" fill="#FFFFFF" width="130" height="13.3"></rect> <rect y="66.7" fill="#FFFFFF" width="130" height="13.3"></rect> <rect y="0" fill="#2A66B7" width="70" height="66.7"></rect> <polygon fill="#FFFFFF" points="13.5,4 15.8,8.9 21,9.7 17.2,13.6 18.1,19 13.5,16.4 8.9,19 9.8,13.6 6,9.7 11.2,8.9 "></polygon> <polygon fill="#FFFFFF" points="34,4 36.3,8.9 41.5,9.7 37.8,13.6 38.6,19 34,16.4 29.4,19 30.2,13.6 26.5,9.7 31.7,8.9 "></polygon> <polygon fill="#FFFFFF" points="54.5,4 56.8,8.9 62,9.7 58.2,13.6 59.1,19 54.5,16.4 49.9,19 50.8,13.6 47,9.7 52.2,8.9 "></polygon> <polygon fill="#FFFFFF" points="24,24 26.3,28.9 31.5,29.7 27.8,33.6 28.6,39 24,36.4 19.4,39 20.2,33.6 16.5,29.7 21.7,28.9 "></polygon> <polygon fill="#FFFFFF" points="44.5,24 46.8,28.9 52,29.7 48.2,33.6 49.1,39 44.5,36.4 39.9,39 40.8,33.6 37,29.7 42.2,28.9 "></polygon> <polygon fill="#FFFFFF" points="13.5,45.2 15.8,50.1 21,50.9 17.2,54.7 18.1,60.2 13.5,57.6 8.9,60.2 9.8,54.7 6,50.9 11.2,50.1 "></polygon> <polygon fill="#FFFFFF" points="34,45.2 36.3,50.1 41.5,50.9 37.8,54.7 38.6,60.2 34,57.6 29.4,60.2 30.2,54.7 26.5,50.9 31.7,50.1 "></polygon> <polygon fill="#FFFFFF" points="54.5,45.2 56.8,50.1 62,50.9 58.2,54.7 59.1,60.2 54.5,57.6 49.9,60.2 50.8,54.7 47,50.9 52.2,50.1 "></polygon> </g> </g> <g id="Europe"> <g id="Row_5"> </g> <g id="Row_4"> </g> <g id="Row_3"> </g> <g id="Row_2"> </g> <g id="Row_1"> </g> </g> </g></svg>
+                  <span className="ml-2 text-slate-700 font-semibold">US</span>
+                </div>
                 <div className="flex items-center gap-2 text-slate-700">
                   <Calendar className="w-5 h-5 text-blue-600" />
                   <span className="font-semibold">December 7, 2025</span>
@@ -107,6 +169,20 @@ export default function MLSBLandingPage() {
                 <div className="flex items-center gap-2 text-slate-700">
                   <MapPin className="w-5 h-5 text-blue-600" />
                   <span className="font-semibold">Close to San Diego Convention Center</span>
+                </div>
+              </div>
+              <div className="mt-6 md:mt-0 border-t border-gray-300 pt-3 md:pt-0 md:border-t-0 flex flex-col md:flex-row items-center justify-center lg:justify-start gap-6 mb-8">
+                <div className="flex items-center">
+                  <svg version="1.1" viewBox="0 0 130 120" enableBackground="new 0 0 130 120" fill="#000000" className="w-5 h-5"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Infos"> <rect id="BG" x="-200" y="-740" fill="#D8D8D8" width="2180" height="1700"></rect> </g> <g id="Others"> </g> <g id="Europe"> <g id="Row_5"> </g> <g id="Row_4"> </g> <g id="Row_3"> </g> <g id="Row_2"> <g> <rect y="0" fill="#DB3A49" width="130" height="120"></rect> <rect x="37" fill="#FFFFFF" width="30" height="120"></rect> <rect y="46" fill="#FFFFFF" width="130" height="28"></rect> </g> </g> <g id="Row_1"> </g> </g> </g></svg>
+              <span className="ml-2 text-slate-700 font-semibold">EU</span>
+                </div>
+                <div className="flex items-center gap-2 text-slate-700">
+                  <Calendar className="w-5 h-5 text-blue-600" />
+                  <span className="font-semibold">December 7, 2025</span>
+                </div>
+                <div className="flex items-center gap-2 text-slate-700">
+                  <MapPin className="w-5 h-5 text-blue-600" />
+                  <span className="font-semibold">Bella Center, Copenhagen</span>
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -184,9 +260,9 @@ export default function MLSBLandingPage() {
                   <div>
                     <h4 className="font-semibold text-slate-800 mb-3">Important Dates</h4>
                     <div className="space-y-2 text-slate-600">
-                      <div className="flex justify-between">
+                      <div className="grid grid-cols-2">
                         <span>Paper Submission:</span>
-                        <span className="font-semibold text-red-600">September 26, 2025 AoE</span>
+                        <span className="font-semibold text-red-600"><span className="line-through">September 26, 2025 AoE</span><br />October 1, 2025 AoE</span>
                       </div>
                       <div className="flex justify-between">
                         <span>Notification of Acceptance:</span>
@@ -219,14 +295,18 @@ export default function MLSBLandingPage() {
         </div>
       </section>
 
+
+    <div className="grid md:grid-cols-2 bg-slate-50 divide-x divide-gray-200 divide-2">
       {/* Featured Speakers */}
-      <section className="py-16 bg-slate-50" id="speakers">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-slate-800 mb-4">Invited Speakers</h2>
+      <section className="py-16 bg-slate-50 pr-0 md:pr-4 " id="speakers">
+        <div className="w-full mx-auto px-4">
+          <div className="text-center mb-12 flex justify-center">
+            <h2 className="text-4xl font-bold text-slate-800 mb-4 flex flex-col justify-center items-center">
+              <span>Invited Speakers</span>
+              <span className="flex items-center text-xl mt-4 space-x-1 text-blue-600"> <MapPin className="w-5 h-5" /> <span>San Diego, US</span> </span></h2>
            
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 mx-auto">
             {speakers.map((speaker, index) => (
               <Card key={index} className="bg-white hover:shadow-lg transition-shadow duration-300">
                 <CardContent className="p-6 text-center">
@@ -248,6 +328,37 @@ export default function MLSBLandingPage() {
         </div>
       </section>
 
+       {/* Featured Speakers EU */}
+      <section className="py-16  pl-0 md:pl-4 " id="speakers-eu">
+        <div className="w-full mx-auto px-4">
+          <div className="text-center mb-12 flex justify-center">
+            <h2 className="text-4xl font-bold text-slate-800 mb-4 flex flex-col justify-center items-center">
+              <span>Invited Speakers</span>
+              <span className="flex items-center text-xl mt-4 space-x-1 text-red-600"> <MapPin className="w-5 h-5" /> <span>Copenhagen, DK</span> </span></h2>
+           
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 mx-auto">
+            {speakers_eu.map((speaker, index) => (
+              <Card key={index} className="bg-white hover:shadow-lg transition-shadow duration-300">
+                <CardContent className="p-6 text-center">
+                  <div className="relative w-32 h-32 mx-auto mb-4">
+                    <Image
+                      src={speaker.image || "/placeholder.svg"}
+                      alt={speaker.name}
+                      fill
+                      className="rounded-full object-cover"
+                    />
+                  </div>
+                  <h3 className="font-bold text-lg text-slate-800 mb-1">{speaker.name}</h3>
+                  <p className="text-blue-600 font-medium mb-2">{speaker.affiliation}</p>
+                  <p className="text-sm text-slate-600">{speaker.expertise}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+</div>
       {/* Sponsors */}
       <SponsorsSection />
 
