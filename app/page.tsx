@@ -78,14 +78,14 @@ export default function MLSBLandingPage() {
    {
      name: "Patrick Bryant",
      affiliation: "Stockholm University",
-     expertise: "",
+     expertise: "Protein Design",
      image: "/speakers/patrick.jpg",
    },
    {
-     name: "Harris Saeed",
+     name: "Haris Saeed",
      affiliation: "University of Oxford",
      expertise: "",
-     image: "",
+     image: "/speakers/haris.jpg",
    },
    {
      name: "Paolo Marcatili",
@@ -96,7 +96,7 @@ export default function MLSBLandingPage() {
    {
      name: "Julian Englert",
      affiliation: "AdaptyvBio",
-     expertise: "Lab Automation",
+     expertise: "",
      image: "/speakers/julian.png",
    },
    {
