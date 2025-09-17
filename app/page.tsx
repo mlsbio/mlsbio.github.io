@@ -84,7 +84,7 @@ export default function MLSBLandingPage() {
    {
      name: "Haris Saeed",
      affiliation: "University of Oxford",
-     expertise: "Protein Engineering",
+     expertise: "Protein Tuning",
      image: "/speakers/haris.jpg",
    },
    {
