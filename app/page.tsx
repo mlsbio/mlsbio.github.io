@@ -178,7 +178,7 @@ export default function MLSBLandingPage() {
                 </div>
                 <div className="flex items-center gap-2 text-slate-700">
                   <Calendar className="w-5 h-5 text-blue-600" />
-                  <span className="font-semibold">December 7, 2025</span>
+                  <span className="font-semibold">December 6/7, 2025</span>
                 </div>
                 <div className="flex items-center gap-2 text-slate-700">
                   <MapPin className="w-5 h-5 text-blue-600" />
