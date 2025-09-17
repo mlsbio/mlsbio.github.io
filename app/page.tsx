@@ -84,31 +84,31 @@ export default function MLSBLandingPage() {
    {
      name: "Haris Saeed",
      affiliation: "University of Oxford",
-     expertise: "",
+     expertise: "Protein Engineering",
      image: "/speakers/haris.jpg",
    },
    {
      name: "Paolo Marcatili",
      affiliation: "Novo Nordisk",
-     expertise: "",
+     expertise: "Antibody Design",
      image: "/speakers/paolo.jpg",
    },
    {
      name: "Julian Englert",
      affiliation: "AdaptyvBio",
-     expertise: "",
+     expertise: "Lab Automation",
      image: "/speakers/julian.png",
    },
    {
      name: "Constance Ferragu",
      affiliation: "Cradle",
-     expertise: "",
+     expertise: "Protein Engineering",
      image: "/speakers/constance.png",
    },
    {
      name: "Charlie Harris",
      affiliation: "UK Government Sovereign AI",
-     expertise: "",
+     expertise: "Structural Biology",
      image: "/speakers/charlie.png",
    }
 
