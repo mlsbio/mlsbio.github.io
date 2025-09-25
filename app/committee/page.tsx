@@ -71,6 +71,13 @@ export default function CommitteePage() {
       bio: "",
     },
     {
+      name: "Patrick Kidger",
+      affiliation: "Cradle",
+      role: "",
+      image: "/organizer/patrick.jpg",
+      bio: "",
+    },
+    {
       name: "Johanna Haffner",
       affiliation: "ETH Zurich",
       role: "",
