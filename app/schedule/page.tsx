@@ -44,7 +44,7 @@ export default function SchedulePage() {
             <CardContent className="space-y-6">
               <div className="text-center">
                 <Badge className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 text-lg mb-6">
-                  Schedule will be announced in September 2025
+                  Schedule will be announced in October 2025
                 </Badge>
               </div>
 
