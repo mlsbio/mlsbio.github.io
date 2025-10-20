@@ -12,20 +12,20 @@ import { MapPin, ExternalLink, Navigation } from "lucide-react"
 
 export function VenueModal() {
   const venueInfo = {
-    name: "San Diego Convention Center",
-    address: "111 W Harbor Dr, San Diego, CA 92101",
+    name: "UCSD Park & Market",
+    address: "1100 Market St., San Diego, CA 92101",
     city: "San Diego, California",
-    googleMapsUrl: "https://maps.google.com/?q=San+Diego+Convention+Center,111+W+Harbor+Dr,San+Diego,CA+92101",
-    appleMapsUrl: "https://maps.apple.com/?q=San+Diego+Convention+Center&address=111+W+Harbor+Dr,San+Diego,CA+92101",
+    googleMapsUrl: "https://maps.app.goo.gl/dBV3bbm3DpxUcyeE6",
+    appleMapsUrl: "https://maps.apple/p/PVQEuI5e~dh00U",
   }
 
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button size="lg" variant="outline" className="bg-white/80 backdrop-blur-sm hover:bg-white/90 border-blue-200">
-          <MapPin className="w-4 h-4 mr-2" />
-          How to Get to Venue
-        </Button>
+         <div className="flex items-center gap-2 text-slate-700 font-semibold cursor-pointer hover:text-blue-600">
+          <MapPin className="w-5 h-5 mr-0.5 text-blue-600" />
+UCSD Park & Market
+        </div>
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
@@ -64,7 +64,7 @@ export function VenueModal() {
 
           <div className="bg-blue-50 p-3 rounded-lg border border-blue-200">
             <p className="text-sm text-blue-800">
-              <strong>Note:</strong> The venue is located in downtown San Diego, easily accessible by public
+              <strong>Note:</strong> The venue is located in downtown San Diego close to the convention center, easily accessible by public
               transportation, rideshare, and walking from nearby hotels.
             </p>
           </div>

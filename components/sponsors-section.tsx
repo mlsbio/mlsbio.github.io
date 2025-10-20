@@ -1,24 +1,23 @@
 import Image from "next/image"
 
-const sponsors = [
-  { name: "DeepMind", logo: "/placeholder.svg?height=80&width=200" },
-  { name: "Google Research", logo: "/placeholder.svg?height=80&width=200" },
-  { name: "Microsoft Research", logo: "/placeholder.svg?height=80&width=200" },
-  { name: "NVIDIA", logo: "/placeholder.svg?height=80&width=200" },
-  { name: "Roche", logo: "/placeholder.svg?height=80&width=200" },
-  { name: "Pfizer", logo: "/placeholder.svg?height=80&width=200" },
-]
+
+  const sponsors = [
+    { name: "Xaira", logo: "/img/sponsors/xaira_black.png" },
+    { name: "Generate", logo: "/img/sponsors/generate-bio-afpc-logo-cmyk-black.png" },
+    { name: "EvoScale", logo: "/img/sponsors/evo_scale.svg" },
+    { name: "Latent Labs", logo: "/img/sponsors/latentlabs.svg" },
+  ]
 
 export default function SponsorsSection() {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-slate-800 mb-4">Our Sponsors</h2>
-          <p className="text-xl text-slate-600">If you are interested in sponsoring MLSB please reach out via e-mail.</p>
+          <h2 className="text-4xl font-bold text-slate-800 mb-4">Sponsors US Edition</h2>
+          {/* <p className="text-xl text-slate-600">If you are interested in sponsoring MLSB please reach out via e-mail.</p> */}
         </div>
-        {/*
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+        
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8  justify-center w-full">
           {sponsors.map((sponsor, index) => (
             <div
               key={index}
@@ -33,7 +32,7 @@ export default function SponsorsSection() {
               />
             </div>
           ))}
-        </div> */}
+        </div> 
       </div>
     </section>
   )

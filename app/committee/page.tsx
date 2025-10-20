@@ -159,7 +159,7 @@ export default function CommitteePage() {
 
       <section className="py-8 px-4">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+          <div className="grid md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3">
             {organizerseu.map((member, index) => (
               <Card key={index} className="bg-white hover:shadow-lg transition-shadow duration-300">
                 <CardContent className="p-6 text-center">
