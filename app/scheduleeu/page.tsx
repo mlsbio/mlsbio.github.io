@@ -87,7 +87,7 @@ export default function SchedulePage() {
       </section>
 
       {/* Sponsors */}
-      <SponsorsSection />
+      {/* <SponsorsSection /> */}
 
       {/* Newsletter */}
       <NewsletterSection />

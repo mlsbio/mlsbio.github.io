@@ -102,13 +102,21 @@ export default function Navbar({ highlight }: NavbarProps) {
             >
               Past Editions
             </Link>
+
+            <div className="flex flex-col space-y-1">
             <a href="https://luma.com/yifbtxtw" target="_blank">
-            <Button variant="outline" className="relative" >
-              <span className="mr-2">Registration</span>
+            <Button variant="outline" size="sm" className="relative " >
+              <span className="mr-2">Registration US</span>
             <Badge className="absolute -top-2 -right-2 text-xs bg-gradient-to-r from-orange-500 to-red-500 text-white border-0 shadow-lg">
                     Free
                   </Badge>
             </Button></a>
+              <a href="https://eurips.cc/" target="_blank">
+            <Button variant="outline" size="sm" className="relative" >
+              <span className="mr-2">Registration EU</span>
+            
+            </Button></a>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -144,7 +152,18 @@ export default function Navbar({ highlight }: NavbarProps) {
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Schedule
+                Schedule US
+              </Link>
+               <Link
+                href="/scheduleeu"
+                className={`px-4 py-2 rounded-md transition-colors ${
+                  isActive("/scheduleeu")
+                    ? "text-blue-600 font-medium bg-blue-50"
+                    : "text-slate-600 hover:text-blue-600 hover:bg-slate-50"
+                }`}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Schedule EU
               </Link>
               <Link
                 href="/call-for-papers"
@@ -181,12 +200,19 @@ export default function Navbar({ highlight }: NavbarProps) {
               </Link>
               <div className="px-4">
                 <a href="https://luma.com/yifbtxtw" target="_blank">
-            <Button variant="outline" className="" >
-              <span className="mr-2">Registration</span>
+            <Button variant="outline" className="relative" >
+              <span className="mr-2">Registration US</span>
             <Badge className="absolute -top-2 -right-2 text-xs bg-gradient-to-r from-orange-500 to-red-500 text-white border-0 shadow-lg">
                     free
                   </Badge>
             </Button></a>
+
+             <a href="https://eurips.cc/" target="_blank" className="ml-6">
+            <Button variant="outline" size="sm" className="relative" >
+              <span className="mr-2">Registration EU</span>
+            
+            </Button></a>
+
               </div>
             </div>
           </div>
