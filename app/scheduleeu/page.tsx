@@ -6,7 +6,7 @@ import Link from "next/link"
 import Image from "next/image"
 
 import Navbar from "@/components/navbar"
-import SponsorsSection from "@/components/sponsors-section"
+import SponsorsEUSection from "@/components/sponsors-eu"
 import NewsletterSection from "@/components/newsletter-section"
 
 export default function SchedulePage() {
@@ -88,6 +88,7 @@ export default function SchedulePage() {
 
       {/* Sponsors */}
       {/* <SponsorsSection /> */}
+      <SponsorsEUSection />
 
       {/* Newsletter */}
       <NewsletterSection />

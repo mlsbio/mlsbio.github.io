@@ -7,7 +7,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
 import NewsletterSection from "@/components/newsletter-section"
-
+import SponsorsEUSection from "@/components/sponsors-eu"
 
 export default function PastEditionsPage() {
   const pastEditions = [
@@ -81,7 +81,7 @@ export default function PastEditionsPage() {
 
       {/* Sponsors */}
       <SponsorsSection />
-
+<SponsorsEUSection />
       {/* Newsletter */}
       <NewsletterSection />
 

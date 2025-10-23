@@ -9,6 +9,8 @@ import { VenueModal } from "@/components/venue-modal"
 import Navbar from "@/components/navbar"
 
 import SponsorsSection from "@/components/sponsors-section"
+
+import SponsorsEUSection from "@/components/sponsors-eu"
 import NewsletterSection from "@/components/newsletter-section"
 
 
@@ -395,6 +397,8 @@ export default function MLSBLandingPage() {
 </div>
       {/* Sponsors */}
       <SponsorsSection />
+
+      <SponsorsEUSection />
 
       {/* Newsletter */}
       <NewsletterSection />

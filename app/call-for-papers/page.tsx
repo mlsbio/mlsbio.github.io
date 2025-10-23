@@ -9,6 +9,7 @@ import Image from "next/image"
 import Navbar from "@/components/navbar"
 import NewsletterSection from "@/components/newsletter-section"
 import SponsorsSection from "@/components/sponsors-section"
+import SponsorsEUSection from "@/components/sponsors-eu"
 
 export default function CallForPapersPage() {
   const topics = [
@@ -246,6 +247,7 @@ export default function CallForPapersPage() {
 
       {/* Sponsors */}
       <SponsorsSection />
+      <SponsorsEUSection />
 
       {/* Newsletter */}
       <NewsletterSection />

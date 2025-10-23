@@ -6,6 +6,9 @@ import Link from "next/link"
 
 import Navbar from "@/components/navbar"
 import SponsorsSection from "@/components/sponsors-section"
+
+import SponsorsEUSection from "@/components/sponsors-eu"
+
 import NewsletterSection from "@/components/newsletter-section"
 import { Calendar, MapPin, FileText, Mail, ExternalLink } from "lucide-react"
 
@@ -208,6 +211,7 @@ export default function CommitteePage() {
 
       {/* Sponsors */}
       <SponsorsSection />
+      <SponsorsEUSection />
 
       {/* Newsletter */}
       <NewsletterSection />
