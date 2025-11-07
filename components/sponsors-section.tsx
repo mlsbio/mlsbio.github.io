@@ -5,7 +5,9 @@ import Image from "next/image"
     { name: "Xaira", logo: "/img/sponsors/xaira_black.png" },
     { name: "Generate", logo: "/img/sponsors/generate-bio-afpc-logo-cmyk-black.png" },
     { name: "EvoScale", logo: "/img/sponsors/evo_scale.svg" },
-    { name: "Latent Labs", logo: "/img/sponsors/latentlabs.svg" },
+    { name: "Latent Labs", logo: "/img/sponsors/latentlabs.svg",    },
+    { name: "Terray Therapeutics", logo: "/img/sponsors/terray.svg",    },
+    { name: "Rosetta Commons", logo: "/img/sponsors/rosetta-commons-logo.png",    },
   ]
 
 export default function SponsorsSection() {
@@ -17,7 +19,7 @@ export default function SponsorsSection() {
           {/* <p className="text-xl text-slate-600">If you are interested in sponsoring MLSB please reach out via e-mail.</p> */}
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8  justify-center w-full">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8  justify-center w-full">
           {sponsors.map((sponsor, index) => (
             <div
               key={index}
