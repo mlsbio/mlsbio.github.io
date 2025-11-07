@@ -8,6 +8,7 @@ import Image from "next/image"
     { name: "Latent Labs", logo: "/img/sponsors/latentlabs.svg",    },
     { name: "Terray Therapeutics", logo: "/img/sponsors/terray.svg",    },
     { name: "Rosetta Commons", logo: "/img/sponsors/rosetta-commons-logo.png",    },
+    { name: "Prescient Design", logo: "/img/sponsors/prescient.png",    },
   ]
 
 export default function SponsorsSection() {
