@@ -173,7 +173,7 @@ export default function MLSBLandingPage() {
                 </div>
                 <div className="flex items-center gap-2 text-slate-700">
                   <Calendar className="w-5 h-5 text-blue-600" />
-                  <span className="font-semibold">December 6/7, 2025</span>
+                  <span className="font-semibold">December 7, 2025</span>
                 </div>
                 <div className="flex items-center gap-2 text-slate-700">
                   <MapPin className="w-5 h-5 text-blue-600" />
@@ -221,7 +221,7 @@ export default function MLSBLandingPage() {
                 
                 >
                   <span>Register EU</span>                    <svg version="1.1" viewBox="0 0 130 120" enableBackground="new 0 0 130 120" fill="#000000" className="w-5 h-5"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Infos"> <rect id="BG" x="-200" y="-740" fill="#D8D8D8" width="2180" height="1700"></rect> </g> <g id="Others"> </g> <g id="Europe"> <g id="Row_5"> </g> <g id="Row_4"> </g> <g id="Row_3"> </g> <g id="Row_2"> <g> <rect y="0" fill="#DB3A49" width="130" height="120"></rect> <rect x="37" fill="#FFFFFF" width="30" height="120"></rect> <rect y="46" fill="#FFFFFF" width="130" height="28"></rect> </g> </g> <g id="Row_1"> </g> </g> </g></svg>
-
+          
                 </Button>
                 </a>
               </div>

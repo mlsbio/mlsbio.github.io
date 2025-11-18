@@ -20,7 +20,7 @@ export default function SchedulePage() {
       <section className="py-8 px-4">
         <div className="container mx-auto text-center">
           <h1 className="text-5xl font-bold text-slate-800 mb-4">Workshop Schedule</h1>
-          <p className="text-xl text-slate-600 mb-8">December 6/7, 2025 &middot; Bella Center Copenhagen</p>
+          <p className="text-xl text-slate-600 mb-8">December 7, 2025 &middot; Bella Center Copenhagen</p>
           <div className="flex items-center justify-center gap-2 text-slate-700 mb-8">
             <Clock className="w-5 h-5 text-blue-600" />
             <span>9:00 AM - 5:00 PM CET</span>
@@ -44,7 +44,7 @@ export default function SchedulePage() {
             <CardContent className="space-y-6">
               <div className="text-center">
                 <Badge className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 text-lg mb-6">
-                  Schedule will be announced in October 2025
+                  Schedule will be announced in November 2025
                 </Badge>
               </div>
 
@@ -63,7 +63,7 @@ export default function SchedulePage() {
                   <div className="space-y-2 text-slate-600">
                     <div className="flex justify-between">
                       <span>Date:</span>
-                      <span className="font-semibold">December 6/7, 2025</span>
+                      <span className="font-semibold">December 7, 2025</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Time:</span>
