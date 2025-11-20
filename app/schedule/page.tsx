@@ -269,83 +269,7 @@ export default function SchedulePage() {
         </div>
       </section>
 
-      {/* Coming Soon Section 
-      <section className="py-8 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <Card className="border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50">
-            <CardHeader className="text-center">
-              <div className="flex justify-center mb-4">
-                <Calendar className="w-16 h-16 text-blue-600" />
-              </div>
-              <CardTitle className="text-3xl font-bold text-slate-800 mb-2">Schedule</CardTitle>
-              <CardDescription className="text-lg text-slate-600">
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="text-center">
-                {/* <Badge className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 text-lg mb-6">
-                  Schedule will be announced in October 2025
-                </Badge> d
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-white p-6 rounded-lg border border-blue-100">
-                  <h4 className="font-semibold text-slate-800 mb-3">What to Expect</h4>
-                  <ul className="space-y-2 text-slate-600 list-disc pl-5">
-                    <li> Keynote presentations from leading researchers</li>
-                    <li> Technical paper presentations</li>
-                    <li> Interactive poster sessions</li>
-                    <li> Lunch and Happy Hour</li>
-                  </ul>
-                </div>
-                <div className="bg-white p-6 rounded-lg border border-blue-100">
-                  <h4 className="font-semibold text-slate-800 mb-3">Confirmed Details</h4>
-                  <div className="space-y-2 text-slate-600">
-                    <div className="flex justify-between">
-                      <span>Date:</span>
-                      <span className="font-semibold">December 7, 2025</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Time:</span>
-                      <span className="font-semibold">8:30 AM - 5:00 PM</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Location:</span>
-                      <span className="font-semibold">UCSD Park & Market</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Format:</span>
-                      <span className="font-semibold">In-person</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-
-              {/* Live Stream Button 
-              <div className="text-center pt-6 border-t border-blue-200">
-                <h4 className="font-semibold text-slate-800 mb-4">Can't Attend in Person?</h4>
-                <p className="text-slate-600 mb-6">
-                  Join us virtually! The conference will be live-streamed for remote participants.
-                </p>
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700"
-                  disabled
-                >
-                  <Video className="w-4 h-4 mr-2" />
-                  Live Stream Access
-                  <Badge className="ml-2 text-xs bg-white/20 text-white border-0">Available on Conference Day</Badge>
-                </Button>
-                <p className="text-sm text-slate-500 mt-3">
-                  Live stream link will be shared with registered participants
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>*/}
+   
 
  {/* Schedule */}
       <section className="py-8 px-4">
@@ -382,6 +306,85 @@ export default function SchedulePage() {
               </p>
             </CardContent>
           </Card>*/}
+        </div>
+      </section>
+
+
+ 
+      <section className="py-8 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <Card className="border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50">
+            <CardHeader className="text-center">
+              <div className="flex justify-center mb-4">
+                <Calendar className="w-16 h-16 text-blue-600" />
+              </div>
+              <CardTitle className="text-3xl font-bold text-slate-800 mb-2">Live Stream</CardTitle>
+              <CardDescription className="text-lg text-slate-600">
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              {/* <div className="text-center">
+                 <Badge className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 text-lg mb-6">
+                  Schedule will be announced in October 2025
+                </Badge> 
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-white p-6 rounded-lg border border-blue-100">
+                  <h4 className="font-semibold text-slate-800 mb-3">What to Expect</h4>
+                  <ul className="space-y-2 text-slate-600 list-disc pl-5">
+                    <li> Keynote presentations from leading researchers</li>
+                    <li> Technical paper presentations</li>
+                    <li> Interactive poster sessions</li>
+                    <li> Lunch and Happy Hour</li>
+                  </ul>
+                </div>
+                <div className="bg-white p-6 rounded-lg border border-blue-100">
+                  <h4 className="font-semibold text-slate-800 mb-3">Confirmed Details</h4>
+                  <div className="space-y-2 text-slate-600">
+                    <div className="flex justify-between">
+                      <span>Date:</span>
+                      <span className="font-semibold">December 7, 2025</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Time:</span>
+                      <span className="font-semibold">8:30 AM - 5:00 PM</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Location:</span>
+                      <span className="font-semibold">UCSD Park & Market</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Format:</span>
+                      <span className="font-semibold">In-person</span>
+                    </div>
+                  </div>
+                </div>
+              </div> */}
+
+
+
+              
+              <div className="text-center pt-6 border-t border-blue-200">
+                <h4 className="font-semibold text-slate-800 mb-4">Can't Attend in Person?</h4>
+                <p className="text-slate-600 mb-6">
+                  Join us virtually! The conference will be live-streamed for remote participants.
+                </p>
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700"
+                  disabled
+                >
+                  <Video className="w-4 h-4 mr-2" />
+                  Live Stream Access
+                  <Badge className="ml-2 text-xs bg-white/20 text-white border-0">Available on Conference Day</Badge>
+                </Button>
+                <p className="text-sm text-slate-500 mt-3">
+                  Webinar link registration soon available.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 

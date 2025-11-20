@@ -9,6 +9,7 @@ import Image from "next/image"
     { name: "Terray Therapeutics", logo: "/img/sponsors/terray.svg",    },
     { name: "Rosetta Commons", logo: "/img/sponsors/rosetta-commons-logo.png",    },
     { name: "Atomic AI", logo: "/img/sponsors/atomicai.png",    },
+    { name: "Flex Therapeutics", logo: "/img/sponsors/flex_logo.png",    },
   ]
 
 export default function SponsorsSection() {
