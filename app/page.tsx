@@ -26,10 +26,10 @@ export default function MLSBLandingPage() {
       image: "/speakers/hannah.jpeg",
     },
     {
-      name: "Sam Rodrigues",
-      affiliation: "Future House",
+      name: "Michael Pieler",
+      affiliation: "Future House/Edison Scientific",
       expertise: "AI Agents",
-      image: "/speakers/sam.jpg",
+      image: "/speakers/michael_pieler.png",
     },
     {
       name: "Bruno Correia",

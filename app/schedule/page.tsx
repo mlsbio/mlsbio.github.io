@@ -23,7 +23,12 @@ export default function SchedulePage() {
     {
       time: "08:35",
       endTime: "09:00",
-      title: "Invited Speaker - Sam Rodrigues",
+      // Strike through Sam Rodrigues using <s> tag
+      title: (
+        <>
+          Invited Speaker - <s>Sam Rodrigues</s> Michael Pieler
+        </>
+      ),
       subtitle: "",
       type: "invited",
       icon: Users,
