@@ -29,7 +29,7 @@ export default function MLSBLandingPage() {
       name: "Michael Pieler",
       affiliation: "Future House/Edison Scientific",
       expertise: "AI Agents",
-      image: "/speakers/michael_pieler.png",
+      image: "/img/speakers/michael_pieler.png",
     },
     {
       name: "Bruno Correia",
