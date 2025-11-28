@@ -3,7 +3,7 @@ import Image from "next/image"
 
   const sponsors = [
     { name: "Xaira", logo: "/img/sponsors/xaira_black.png" },
-    { name: "Generate", logo: "/img/sponsors/generate-bio-afpc-logo-cmyk-black.png" },
+    { name: "Generate", logo: "/img/sponsors/generate_logo.png" },
     { name: "Biohub", logo: "/img/sponsors/biohub-logo.svg" },
     { name: "Latent Labs", logo: "/img/sponsors/latentlabs.svg",    },
     { name: "Terray Therapeutics", logo: "/img/sponsors/terray.svg",    },
