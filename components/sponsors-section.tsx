@@ -10,6 +10,7 @@ import Image from "next/image"
     { name: "Rosetta Commons", logo: "/img/sponsors/rosetta-commons-logo.png",    },
     { name: "Atomic AI", logo: "/img/sponsors/atomicai.png",    },
     { name: "Flex Therapeutics", logo: "/img/sponsors/flex_logo.png",    },
+     { name: "Third Rock", logo: "/img/sponsors/third-rock.jpeg",    },
   ]
 
 export default function SponsorsSection() {
