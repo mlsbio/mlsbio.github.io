@@ -15,14 +15,14 @@ export default function SchedulePage() {
   const scheduleItems = [
     {
       time: "08:30",
-      endTime: "08:35",
+      endTime: "08:40",
       title: "Opening Remarks",
       type: "admin",
       icon: Presentation,
     },
     {
-      time: "08:35",
-      endTime: "09:00",
+      time: "08:40",
+      endTime: "09:05",
       // Strike through Sam Rodrigues using <s> tag
       title: (
         <>
@@ -34,8 +34,8 @@ export default function SchedulePage() {
       icon: Users,
     },
     {
-      time: "09:00",
-      endTime: "09:25",
+      time: "09:05",
+      endTime: "09:30",
       title: "Invited Speaker - Bruno Correia",
       subtitle: "",
       authors:
@@ -44,8 +44,8 @@ export default function SchedulePage() {
       icon: Users,
     },
     {
-      time: "09:25",
-      endTime: "09:40",
+      time: "09:30",
+      endTime: "09:45",
       title: "Contributed Talk - SwitchCraft",
       subtitle: "SwitchCraft: Programmatic Design of State-Switching Proteins",
       authors:"Bowen Jing · Mihir Bafna · Adam Klivans · Bonnie Berger",
@@ -53,7 +53,7 @@ export default function SchedulePage() {
       icon: Presentation,
     },
     {
-      time: "09:40",
+      time: "09:45",
       endTime: "09:55",
       title: "Break",
       type: "break",
@@ -70,7 +70,7 @@ export default function SchedulePage() {
     },
     {
       time: "10:10",
-      endTime: "10:45",
+      endTime: "10:35",
       title: "Invited Talk - Hannah Wayment-Steele",
       subtitle: "",
       authors:
@@ -79,8 +79,8 @@ export default function SchedulePage() {
       icon: Users,
     },
     {
-      time: "10:45",
-      endTime: "11:10",
+      time: "10:35",
+      endTime: "11:00",
       title: "Invited Talk - Pratyush Tiwary",
       subtitle: "",
       authors: "",
@@ -88,14 +88,14 @@ export default function SchedulePage() {
       icon: Users,
     },
     {
-      time: "11:10",
-      endTime: "11:15",
+      time: "11:00",
+      endTime: "11:10",
       title: "Word from Sponsors",
       type: "admin",
       icon: Award,
     },
     {
-      time: "11:15",
+      time: "11:10",
       endTime: "12:45",
       title: "Poster Session / Lunch",
       type: "break",
@@ -154,30 +154,30 @@ export default function SchedulePage() {
     },
      {
       time: "02:20",
-      endTime: "02:55",
+      endTime: "02:45",
       title: "Invited Speaker - Mile Sikic",
       subtitle: "",
       type: "invited",
       icon: Users,
     },
     {
-      time: "02:55",
-      endTime: "03:20",
+      time: "02:45",
+      endTime: "03:10",
       title: "Invited Speaker - Krysztof Fidelis, John Moult",
       subtitle: "",
       type: "invited",
       icon: Users,
     },
     {
-      time: "03:20",
-      endTime: "03:25",
+      time: "03:10",
+      endTime: "03:20",
       title: "Break",
       type: "break",
       icon: Coffee,
     },
     
     {
-      time: "03:25",
+      time: "03:20",
       endTime: "04:00",
       title: "Panel Discussion",
       type: "panel",
