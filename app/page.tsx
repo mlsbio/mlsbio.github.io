@@ -110,10 +110,10 @@ export default function MLSBLandingPage() {
      image: "/speakers/constance.png",
    },
    {
-     name: "Charlie Harris",
-     affiliation: "UK Government Sovereign AI",
-     expertise: "Structural Biology",
-     image: "/speakers/charlie.png",
+     name: "Talip Uçar",
+     affiliation: "Boltz",
+     expertise: "Structure Prediction",
+     image: "/speakers/talip_ucar.png",
    }
 
   ]

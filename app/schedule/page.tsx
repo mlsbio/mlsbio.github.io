@@ -375,18 +375,16 @@ export default function SchedulePage() {
                 <p className="text-slate-600 mb-6">
                   Join us virtually! The conference will be live-streamed for remote participants.
                 </p>
+                <a href="https://us06web.zoom.us/webinar/register/WN_gR4Bbh-kSRqTx1zq9s2IDw" target="_blank" rel="noopener noreferrer">
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700"
-                  disabled
                 >
                   <Video className="w-4 h-4 mr-2" />
-                  Live Stream Access
-                  <Badge className="ml-2 text-xs bg-white/20 text-white border-0">Available on Conference Day</Badge>
+                  Register for Live Stream
                 </Button>
-                <p className="text-sm text-slate-500 mt-3">
-                  Webinar link registration soon available.
-                </p>
+                </a>
+               
               </div>
             </CardContent>
           </Card>
