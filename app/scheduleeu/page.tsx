@@ -66,7 +66,7 @@ export default function SchedulePage() {
       endTime: "11:40",
       title: "Industry Panel: Academia & Industry Interface in BioML",
       subtitle: "Moderator: Johanna Haffner, PhD student at ETH",
-      authors: "Julian Englert (Adaptyv Bio), Charlie Harris (UK Government Sovereign AI), Constance Ferragu (Cradle), Paolo Marcatili (Novo Nordisk)",
+      authors: "Julian Englert (Adaptyv Bio), Talip Ucar (Boltz), Constance Ferragu (Cradle), Paolo Marcatili (Novo Nordisk)",
       type: "panel",
       icon: Users,
     },

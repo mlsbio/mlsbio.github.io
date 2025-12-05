@@ -112,7 +112,7 @@ export default function MLSBLandingPage() {
    {
      name: "Talip Uçar",
      affiliation: "Boltz",
-     expertise: "Structure Prediction",
+     expertise: "Protein Design",
      image: "/speakers/talip_ucar.png",
    }
 
