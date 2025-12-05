@@ -7,7 +7,7 @@
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start"
-    },
+  },
   "dependencies": {
     "@google-cloud/storage": "latest",
     "@hookform/resolvers": "^3.9.1",
@@ -51,7 +51,7 @@
     "jpeg-js": "latest",
     "lucide-react": "^0.454.0",
     "molstar": "latest",
-    "next": "15.2.4",
+    "next": "15.2.6",
     "next-themes": "latest",
     "pngjs": "latest",
     "react": "^19",
