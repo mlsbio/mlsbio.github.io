@@ -6,6 +6,9 @@ import Image from "next/image"
 import Link from "next/link"
 import { VenueModal } from "@/components/venue-modal"
 
+
+import {  Video } from "lucide-react"
+
 import Navbar from "@/components/navbar"
 
 import SponsorsSection from "@/components/sponsors-section"
@@ -194,7 +197,17 @@ export default function MLSBLandingPage() {
                  
 
 
+ <a href="https://us06web.zoom.us/webinar/register/WN_gR4Bbh-kSRqTx1zq9s2IDw" target="_blank" rel="noopener noreferrer">
                 <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700"
+                >
+                  <Video className="w-4 h-4 mr-2" />
+                  US Live Stream
+                </Button>
+                </a>
+
+                {/* <Button
                   size="lg"
                   variant="outline"
                   className="bg-gradient-to-r text-white from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 hover:text-white relative"
@@ -211,9 +224,9 @@ export default function MLSBLandingPage() {
 <Badge className="absolute -top-2 -right-2 text-xs bg-gradient-to-r from-orange-500 to-red-500 text-white border-0 shadow-lg">
                     Free
                   </Badge>
-                </Button>
+                </Button> */}
 
-      <a href="https://eurips.cc/" target="_blank">
+      {/* <a href="https://eurips.cc/" target="_blank">
                     <Button
                   size="lg"
                   variant="outline"
@@ -223,7 +236,7 @@ export default function MLSBLandingPage() {
                   <span>Register EU</span>                    <svg version="1.1" viewBox="0 0 130 120" enableBackground="new 0 0 130 120" fill="#000000" className="w-5 h-5"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Infos"> <rect id="BG" x="-200" y="-740" fill="#D8D8D8" width="2180" height="1700"></rect> </g> <g id="Others"> </g> <g id="Europe"> <g id="Row_5"> </g> <g id="Row_4"> </g> <g id="Row_3"> </g> <g id="Row_2"> <g> <rect y="0" fill="#DB3A49" width="130" height="120"></rect> <rect x="37" fill="#FFFFFF" width="30" height="120"></rect> <rect y="46" fill="#FFFFFF" width="130" height="28"></rect> </g> </g> <g id="Row_1"> </g> </g> </g></svg>
           
                 </Button>
-                </a>
+                </a> */}
               </div>
             </div>
 

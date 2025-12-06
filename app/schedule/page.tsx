@@ -275,46 +275,7 @@ export default function SchedulePage() {
       </section>
 
    
-
- {/* Schedule */}
-      <section className="py-8 px-4">
-        <div className="container mx-auto max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-4 lg:items-start">
-            {/* Left Column */}
-            <div className="space-y-4">{leftColumn.map((item, index) => renderScheduleItem(item, index))}</div>
-
-            {/* Right Column */}
-            <div className="space-y-4">
-              {rightColumn.map((item, index) => renderScheduleItem(item, index + midpoint))}
-            </div>
-          </div>
-
-          {/* Live Stream Info 
-          <Card className="mt-8 border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50">
-            <CardContent className="p-6 text-center">
-              <Video className="w-12 h-12 mx-auto mb-4 text-blue-600" />
-              <h3 className="text-xl font-semibold text-slate-800 mb-2">Can't Attend in Person?</h3>
-              <p className="text-slate-600 mb-4">
-                Join us virtually! The workshop will be live-streamed for remote participants.
-              </p>
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700"
-                disabled
-              >
-                <Video className="w-4 h-4 mr-2" />
-                Live Stream Access
-                <Badge className="ml-2 text-xs bg-white/20 text-white border-0">Available on Workshop Day</Badge>
-              </Button>
-              <p className="text-sm text-slate-500 mt-3">
-                Live stream link will be shared with registered participants
-              </p>
-            </CardContent>
-          </Card>*/}
-        </div>
-      </section>
-
-
+   
  
       <section className="py-8 px-4">
         <div className="container mx-auto max-w-4xl">
@@ -390,6 +351,46 @@ export default function SchedulePage() {
           </Card>
         </div>
       </section>
+
+ {/* Schedule */}
+      <section className="py-8 px-4">
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid lg:grid-cols-2 gap-4 lg:items-start">
+            {/* Left Column */}
+            <div className="space-y-4">{leftColumn.map((item, index) => renderScheduleItem(item, index))}</div>
+
+            {/* Right Column */}
+            <div className="space-y-4">
+              {rightColumn.map((item, index) => renderScheduleItem(item, index + midpoint))}
+            </div>
+          </div>
+
+          {/* Live Stream Info 
+          <Card className="mt-8 border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50">
+            <CardContent className="p-6 text-center">
+              <Video className="w-12 h-12 mx-auto mb-4 text-blue-600" />
+              <h3 className="text-xl font-semibold text-slate-800 mb-2">Can't Attend in Person?</h3>
+              <p className="text-slate-600 mb-4">
+                Join us virtually! The workshop will be live-streamed for remote participants.
+              </p>
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700"
+                disabled
+              >
+                <Video className="w-4 h-4 mr-2" />
+                Live Stream Access
+                <Badge className="ml-2 text-xs bg-white/20 text-white border-0">Available on Workshop Day</Badge>
+              </Button>
+              <p className="text-sm text-slate-500 mt-3">
+                Live stream link will be shared with registered participants
+              </p>
+            </CardContent>
+          </Card>*/}
+        </div>
+      </section>
+
+
 
       {/* Sponsors */}
       <SponsorsSection />
