@@ -58,6 +58,7 @@ export default function Navbar({ highlight }: NavbarProps) {
             >
               Speakers
             </a>
+            <div className="flex flex-col">
             <Link
               href="/schedule"
               className={`transition-colors flex items-center space-x-1 ${
@@ -78,6 +79,8 @@ export default function Navbar({ highlight }: NavbarProps) {
               <svg version="1.1" viewBox="0 0 130 120" enableBackground="new 0 0 130 120" fill="#000000" className="w-3 h-3"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Infos"> <rect id="BG" x="-200" y="-740" fill="#D8D8D8" width="2180" height="1700"></rect> </g> <g id="Others"> </g> <g id="Europe"> <g id="Row_5"> </g> <g id="Row_4"> </g> <g id="Row_3"> </g> <g id="Row_2"> <g> <rect y="0" fill="#DB3A49" width="130" height="120"></rect> <rect x="37" fill="#FFFFFF" width="30" height="120"></rect> <rect y="46" fill="#FFFFFF" width="130" height="28"></rect> </g> </g> <g id="Row_1"> </g> </g> </g></svg>
 
             </Link>
+            </div>
+
             <Link
               href="/call-for-papers"
               className={`transition-colors ${
@@ -85,6 +88,15 @@ export default function Navbar({ highlight }: NavbarProps) {
               }`}
             >
               Call for Papers
+            </Link>
+            <Link
+              href="/accepted-papers"
+              className={`transition-colors flex items-center space-x-1 ${
+                isActive("/accepted-papers") ? "text-blue-600 font-medium" : "text-slate-600 hover:text-blue-600"
+              }`}
+            >
+             <span> Accepted Papers </span> 
+
             </Link>
             <Link
               href="/committee"
@@ -103,7 +115,7 @@ export default function Navbar({ highlight }: NavbarProps) {
               Past Editions
             </Link>
 
-            <div className="flex flex-col space-y-1">
+            {/* <div className="flex flex-col space-y-1">
             <a href="https://luma.com/yifbtxtw" target="_blank">
             <Button variant="outline" size="sm" className="relative " >
               <span className="mr-2">Registration US</span>
@@ -116,7 +128,7 @@ export default function Navbar({ highlight }: NavbarProps) {
               <span className="mr-2">Registration EU</span>
             
             </Button></a>
-            </div>
+            </div> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -175,6 +187,17 @@ export default function Navbar({ highlight }: NavbarProps) {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Call for Papers
+              </Link>
+               <Link
+                href="/accepted-papers"
+                className={`px-4 py-2 rounded-md transition-colors ${
+                  isActive("/accepted-papers")
+                    ? "text-blue-600 font-medium bg-blue-50"
+                    : "text-slate-600 hover:text-blue-600 hover:bg-slate-50"
+                }`}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Accepted Papers
               </Link>
               <Link
                 href="/committee"
