@@ -197,13 +197,13 @@ export default function MLSBLandingPage() {
                  
 
 
- <a href="https://us06web.zoom.us/webinar/register/WN_gR4Bbh-kSRqTx1zq9s2IDw" target="_blank" rel="noopener noreferrer">
+ <a href="https://www.youtube.com/playlist?list=PL-zFnMpRmT4tDyFCwWggbQdsi5clD0FLO" target="_blank" rel="noopener noreferrer">
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700"
                 >
                   <Video className="w-4 h-4 mr-2" />
-                  US Live Stream
+                  US Recordings
                 </Button>
                 </a>
 

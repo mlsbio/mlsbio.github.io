@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import {  Calendar } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { Clock, Video, Mail, MapPin, Users, Coffee, Presentation, Award } from "lucide-react"
@@ -282,9 +281,9 @@ export default function SchedulePage() {
           <Card className="border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50">
             <CardHeader className="text-center">
               <div className="flex justify-center mb-4">
-                <Calendar className="w-16 h-16 text-blue-600" />
+                <Video className="w-16 h-16 text-blue-600" />
               </div>
-              <CardTitle className="text-3xl font-bold text-slate-800 mb-2">Live Stream</CardTitle>
+              <CardTitle className="text-3xl font-bold text-slate-800 mb-2">Recording</CardTitle>
               <CardDescription className="text-lg text-slate-600">
               </CardDescription>
             </CardHeader>
@@ -332,20 +331,18 @@ export default function SchedulePage() {
 
               
               <div className="text-center pt-6 border-t border-blue-200">
-                <h4 className="font-semibold text-slate-800 mb-4">Can't Attend in Person?</h4>
                 <p className="text-slate-600 mb-6">
-                  Join us virtually! The conference will be live-streamed for remote participants.
+                  Recordings of some sessions are available on YouTube:
                 </p>
-                <a href="https://us06web.zoom.us/webinar/register/WN_gR4Bbh-kSRqTx1zq9s2IDw" target="_blank" rel="noopener noreferrer">
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700"
-                >
-                  <Video className="w-4 h-4 mr-2" />
-                  Register for Live Stream
-                </Button>
+                <a href="https://www.youtube.com/playlist?list=PL-zFnMpRmT4tDyFCwWggbQdsi5clD0FLO" target="_blank" rel="noopener noreferrer" className="inline-block">
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800"
+                  >
+                    <Video className="w-4 h-4 mr-2" />
+                    Watch Recordings
+                  </Button>
                 </a>
-               
               </div>
             </CardContent>
           </Card>
