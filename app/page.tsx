@@ -116,7 +116,7 @@ export default function MLSBLandingPage() {
      name: "Talip Uçar",
      affiliation: "Boltz",
      expertise: "Protein Design",
-     image: "",
+     image: "/speakers/talip_ucar.png",
    }
 
   ]
