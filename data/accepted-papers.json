@@ -480,5 +480,21 @@
         "abstract": "Sparse autoencoders (SAEs) are a mechanistic interpretability technique that have been used to provide insight into learned concepts within large protein language models. Here, we employ TopK and Ordered SAEs to investigate an autoregressive antibody language model, p-IgGen, and steer its generation. We show that TopK SAEs can reveal biologically meaningful latent features, but high feature\u2013concept correlation does not guarantee causal control over generation. In contrast, Ordered SAEs impose a hierarchical structure that reliably identifies steerable features, but at the expense of more complex and less interpretable activation patterns. These findings advance the mechanistic interpretability of domain-specific protein language models and suggest that, while TopK SAEs suffice for mapping latent features to concepts, Ordered SAEs are preferable when precise generative steering is required.",
         "category": "Poster",
         "location": " San Diego"
+    },
+{
+        "id": 95,
+        "title": "Tackling Molecule Assembly with Graph Diffusion",
+        "authors": "Rohan Koodli, Alexander Powers, Ayush Pandit, Chiho Im, Ron Dror",
+        "abstract": "A common starting point for drug design is to find small chemical groups or fragments that form interactions with distinct subregions in a protein binding pocket. However, once suitable fragments are identified, assembling these fragments into a high affinity drug with desirable pharmacological properties is difficult. This molecule assembly task is particularly challenging because, initially, fragment positions are known only approximately, and the combinatorial space of potential connectivities is extremely large. Even if the individual fragments form favorable interactions with regions of the pocket, a poor assembly of these fragments can drastically compromise the molecule's druglikeness and hinder its binding affinity. In this paper, we present EdGr, a new graph diffusion framework tailored for the molecule assembly task. EdGr can handle both fragments and atoms, and predicted candidate edge likelihoods influence node position updates during the diffusion denoising process, allowing connectivity cues to guide spatial movements, and vice versa. EdGr outperforms previous methods on the molecule assembly task and stays robust even as confidence in fragment placement decreases.",
+        "category": "Poster",
+        "location": " San Diego"
+    },
+{
+        "id": 121,
+        "title": "PocketX: Preference Alignment for Protein Pockets Design through Group Relative Policy Optimization",
+        "authors": "Yuliang Fan, Zaikai He, Bin Li, Bin He, Mingshu Zhang, Jian Zhang, Haicang Zhang",
+        "abstract": "Designing protein pockets that target specific ligands is crucial for drug discovery and enzyme engineering. Although deep generative models show promise in proposing high-quality pockets, they are usually trained purely to match the data distribution and therefore overlook key biophysical properties, such as binding affinity, expression, and solubility, that ultimately determine developability and success. We introduce PocketX, an online reinforcement learning framework that explicitly aligns a generative model with desired biophysical properties. The framework first trains a base model that co-designs pocket structures and sequences conditioned on a target ligand, and then fine-tunes this model with Group Relative Policy Optimization (GRPO) to reward the desired attributes. Because GRPO employs group-relative rewards, it produces lower-variance policy updates, resulting in more stable and efficient learning than competing alignment strategies. Evaluated on the CrossDocked2020 benchmark, PocketX surpasses existing methods in metrics such as binding energy and evolutionary plausibility. Ablation studies further show that GRPO outperforms alternative alignment strategies, including Direct Preference Optimization (DPO), confirming GRPO’s effectiveness for biophysical property alignment.",
+        "category": "Poster",
+        "location": " Copenhagen"
     }
 ]
