@@ -88,34 +88,3 @@
     @apply bg-background text-foreground;
   }
 }
-
-/* MLBIO merge illustration: flowing connectors + pulsing node.
-   Only animates when the user hasn't asked for reduced motion. */
-@media (prefers-reduced-motion: no-preference) {
-  .mlbio-flow {
-    stroke-dasharray: 6 10;
-    animation: mlbio-flow 1.6s linear infinite;
-  }
-  .mlbio-pulse {
-    transform-box: fill-box;
-    transform-origin: center;
-    animation: mlbio-pulse 3s ease-out infinite;
-  }
-}
-
-@keyframes mlbio-flow {
-  to {
-    stroke-dashoffset: -32;
-  }
-}
-
-@keyframes mlbio-pulse {
-  0% {
-    transform: scale(1);
-    opacity: 0.5;
-  }
-  100% {
-    transform: scale(1.35);
-    opacity: 0;
-  }
-}

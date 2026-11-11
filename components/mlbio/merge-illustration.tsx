@@ -1,109 +1,180 @@
-// Hero illustration: a DNA double helix (MLCB, computational biology) and a
-// protein alpha-helix ribbon (MLSB, structural biology) flow in from the left
-// and merge into a single MLBIO node.
+// Hero illustration: two ribbons, one carrying a DNA sequence (MLCB) and one a
+// protein sequence (MLSB), converge and stack into a single MLBIO band. The
+// protein ribbon starts as an alpha helix (cartoon style) that unwinds into
+// the flat band.
 
-const HELIX_START = 20
-const HELIX_END = 200
+const DNA = "ATGCGTACCTGAGGCTAAGTCCGATTGCAACGTTAGCCGATCGGATCCATG"
+const PROTEIN = "MKTAYIAKQRQISFVKSHFSRQLEERLGLIEVQAPILSRVGDGTQDNLSG"
 
-// DNA double helix centred on y=90. 180px / 60px period = 3 full turns, so
-// both strands meet at y=90 at the end and can merge into one connector.
-function dnaStrand(phase: number) {
-  const pts: string[] = []
-  for (let x = HELIX_START; x <= HELIX_END; x += 2) {
-    const y = 90 + 22 * Math.sin(((x - HELIX_START) / 60) * 2 * Math.PI + phase)
-    pts.push(`${x.toFixed(1)},${y.toFixed(1)}`)
+// Each ribbon is 48 wide. They end stacked (centres 176 and 224), so together
+// they fill the 96-wide merged band between y=152 and y=248.
+const CB_PATH = "M24 72 C 190 72, 200 176, 330 176 L 470 176"
+
+// Alpha helix: a ribbon wound around a horizontal axis at y=HELIX_Y with radius
+// 24 (so it is as tall as the flat ribbon), projected onto the page. Each half
+// turn is one slanted strip; strips with the ribbon in front (sin t > 0) are
+// drawn over the ones behind.
+const HELIX_X0 = 9 // first strip starts at x=0, flush with the DNA ribbon's rounded end
+const HELIX_PITCH = 44 // px advanced per full turn
+const HELIX_TURNS = 2.5 // ends on a front strip, edge-on along the bottom edge
+const HELIX_HALF_WIDTH = 9
+const HELIX_R = 24
+const HELIX_Y = 328
+
+function helixStrip(t0: number) {
+  const top: string[] = []
+  const bottom: string[] = []
+  for (let i = 0; i <= 16; i++) {
+    const t = t0 + (i / 16) * Math.PI
+    const x = HELIX_X0 + (HELIX_PITCH * t) / (2 * Math.PI)
+    const y = HELIX_Y - HELIX_R * Math.cos(t)
+    top.push(`${(x - HELIX_HALF_WIDTH).toFixed(1)},${y.toFixed(1)}`)
+    bottom.unshift(`${(x + HELIX_HALF_WIDTH).toFixed(1)},${y.toFixed(1)}`)
   }
-  return `M${pts.join(" L")}`
+  return `M${top.join(" L")} L${bottom.join(" L")} Z`
 }
 
-function dnaRungs() {
-  const rungs: { x: number; y1: number; y2: number }[] = []
-  for (let x = HELIX_START + 7.5; x < HELIX_END; x += 15) {
-    const s = 22 * Math.sin(((x - HELIX_START) / 60) * 2 * Math.PI)
-    if (Math.abs(s) > 6) rungs.push({ x, y1: 90 + s, y2: 90 - s })
-  }
-  return rungs
+const helixFront: string[] = []
+const helixBack: string[] = []
+for (let k = 0; k < HELIX_TURNS * 2; k++) {
+  ;(k % 2 === 0 ? helixFront : helixBack).push(helixStrip(k * Math.PI))
 }
 
-// Alpha helix drawn as a prolate cycloid (looping coil) centred on y=270.
-// t runs to 12π so the coil ends at its top (y = 256) heading right.
-function proteinCoil() {
-  const a = 15 / Math.PI // horizontal advance per radian -> 30px per turn
-  const b = 14
-  const pts: string[] = []
-  const tEnd = 12 * Math.PI
-  for (let t = 0; t <= tEnd + 1e-6; t += 0.12) {
-    const x = HELIX_START + a * t - b * Math.sin(t)
-    const y = 270 - b * Math.cos(t)
-    pts.push(`${x.toFixed(1)},${y.toFixed(1)}`)
+// Unwinding: the helix ends with the ribbon edge-on along its bottom edge. Over
+// TWIST_LEN px it rotates open about that edge until it is the full 48px flat
+// band, which then carries the sequence.
+const HELIX_END_X = HELIX_X0 + HELIX_PITCH * HELIX_TURNS
+const TWIST_START = HELIX_END_X - HELIX_HALF_WIDTH
+const TWIST_LEN = 20
+const BAND_START = TWIST_START + TWIST_LEN
+
+function twistPath() {
+  const top: string[] = []
+  for (let i = 0; i <= 24; i++) {
+    const u = i / 24
+    const ease = u * u * (3 - 2 * u)
+    top.push(`${(TWIST_START + u * TWIST_LEN).toFixed(1)},${(HELIX_Y + HELIX_R - 2 * HELIX_R * ease).toFixed(1)}`)
   }
-  return `M${pts.join(" L")}`
+  // runs 6px under the band so the two shapes overlap instead of leaving a seam
+  return `M${top.join(" L")} L${BAND_START + 6},${HELIX_Y - HELIX_R} L${BAND_START + 6},${HELIX_Y + HELIX_R} L${TWIST_START},${HELIX_Y + HELIX_R} Z`
 }
 
-const coilEndX = HELIX_START + (15 / Math.PI) * 12 * Math.PI // = 200
+const SB_PATH = `M${BAND_START} ${HELIX_Y} C ${BAND_START + 87} ${HELIX_Y}, 262 224, 330 224 L 470 224`
 
 export default function MergeIllustration({ className = "" }: { className?: string }) {
-  const rungs = dnaRungs()
-
   return (
     <svg
-      viewBox="0 0 480 360"
+      viewBox="0 0 520 400"
       role="img"
-      aria-label="Illustration: MLCB (a DNA helix) and MLSB (a protein helix) merging into MLBIO"
+      aria-label="Illustration: the MLCB and MLSB ribbons merging into one MLBIO band"
       className={className}
     >
       <defs>
-        <linearGradient id="mlbio-cb" x1="0" x2="1" y1="0" y2="0">
+        {/* Both ribbons end in the same solid blue at x=420, so they fuse into
+            one band without an overlay. */}
+        <linearGradient id="mlbio-cb" gradientUnits="userSpaceOnUse" x1="24" x2="420" y1="0" y2="0">
           <stop offset="0%" stopColor="#38bdf8" />
-          <stop offset="100%" stopColor="#2563eb" />
-        </linearGradient>
-        <linearGradient id="mlbio-sb" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stopColor="#a78bfa" />
-          <stop offset="100%" stopColor="#4f46e5" />
-        </linearGradient>
-        <radialGradient id="mlbio-node" cx="35%" cy="30%" r="80%">
-          <stop offset="0%" stopColor="#60a5fa" />
           <stop offset="60%" stopColor="#2563eb" />
-          <stop offset="100%" stopColor="#3730a3" />
-        </radialGradient>
+          <stop offset="100%" stopColor="#2f4fd8" />
+        </linearGradient>
+        <linearGradient id="mlbio-sb" gradientUnits="userSpaceOnUse" x1="24" x2="420" y1="0" y2="0">
+          <stop offset="0%" stopColor="#a78bfa" />
+          <stop offset="60%" stopColor="#6366f1" />
+          <stop offset="100%" stopColor="#2f4fd8" />
+        </linearGradient>
+        {/* Shading laid over the helix strips, so they keep the ribbon's own hue */}
+        <linearGradient id="mlbio-helix-light" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%" stopColor="#1e1b4b" stopOpacity="0.12" />
+          <stop offset="45%" stopColor="#ffffff" stopOpacity="0.25" />
+          <stop offset="100%" stopColor="#1e1b4b" stopOpacity="0.06" />
+        </linearGradient>
+        {/* Sequences fade out before the MLBIO label */}
+        <linearGradient id="mlbio-seq-fade" gradientUnits="userSpaceOnUse" x1="330" x2="395" y1="0" y2="0">
+          <stop offset="0%" stopColor="#ffffff" />
+          <stop offset="100%" stopColor="#000000" />
+        </linearGradient>
+        <mask id="mlbio-seq-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="520" height="400">
+          <rect width="520" height="400" fill="url(#mlbio-seq-fade)" />
+        </mask>
+        <path id="mlbio-cb-path" d={CB_PATH} />
+        <path id="mlbio-sb-path" d={SB_PATH} />
       </defs>
 
-      {/* MLCB: DNA double helix */}
-      <text x={HELIX_START} y="42" className="font-display" fontSize="18" fontWeight="700" fill="#1e3a8a">
-        MLCB
-      </text>
-      <text x={HELIX_START + 62} y="42" fontSize="11" fill="#2563eb" letterSpacing="0.04em">
-        computational biology
-      </text>
-      <g stroke="#93c5fd" strokeWidth="2" strokeLinecap="round">
-        {rungs.map((r) => (
-          <line key={r.x} x1={r.x} x2={r.x} y1={r.y1} y2={r.y2} />
+      {/* soft shadow under the ribbons */}
+      <g opacity="0.18" transform="translate(0 10)" style={{ filter: "blur(10px)" }}>
+        <use href="#mlbio-cb-path" fill="none" stroke="#1e3a8a" strokeWidth="48" />
+        <use href="#mlbio-sb-path" fill="none" stroke="#312e81" strokeWidth="48" />
+        <path d={twistPath()} fill="#312e81" />
+        <rect x="420" y="152" width="98" height="96" rx="48" fill="#1e3a8a" />
+      </g>
+
+      {/* protein ribbon: alpha helix -> unwinding twist -> flat band */}
+      <g fill="url(#mlbio-sb)">
+        {helixBack.map((d) => (
+          <path key={d} d={d} />
         ))}
       </g>
-      <path d={dnaStrand(0)} fill="none" stroke="url(#mlbio-cb)" strokeWidth="4" strokeLinecap="round" />
-      <path d={dnaStrand(Math.PI)} fill="none" stroke="url(#mlbio-cb)" strokeWidth="4" strokeLinecap="round" opacity="0.7" />
+      <g fill="#1e1b4b" fillOpacity="0.25">
+        {helixBack.map((d) => (
+          <path key={d} d={d} />
+        ))}
+      </g>
+      <use href="#mlbio-sb-path" fill="none" stroke="url(#mlbio-sb)" strokeWidth="49" />
+      <g>
+        <path d={twistPath()} fill="url(#mlbio-sb)" />
+        {helixFront.map((d) => (
+          <g key={d}>
+            <path d={d} fill="url(#mlbio-sb)" />
+            <path d={d} fill="url(#mlbio-helix-light)" />
+          </g>
+        ))}
+      </g>
 
-      {/* MLSB: protein alpha helix */}
-      <text x={HELIX_START} y="332" className="font-display" fontSize="18" fontWeight="700" fill="#312e81">
-        MLSB
-      </text>
-      <text x={HELIX_START + 60} y="332" fontSize="11" fill="#4f46e5" letterSpacing="0.04em">
-        structural biology
-      </text>
-      <path d={proteinCoil()} fill="none" stroke="url(#mlbio-sb)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+      {/* DNA ribbon */}
+      <use href="#mlbio-cb-path" fill="none" stroke="url(#mlbio-cb)" strokeWidth="48" strokeLinecap="round" />
 
-      {/* Connectors converging on the merge node */}
-      <path d={`M${HELIX_END} 90 C 270 90, 280 180, 328 180`} fill="none" stroke="#bfdbfe" strokeWidth="5" strokeLinecap="round" />
-      <path d={`M${coilEndX} 256 C 270 256, 280 180, 328 180`} fill="none" stroke="#c7d2fe" strokeWidth="5" strokeLinecap="round" />
-      <path d={`M${HELIX_END} 90 C 270 90, 280 180, 328 180`} fill="none" stroke="#2563eb" strokeWidth="3" strokeLinecap="round" className="mlbio-flow" />
-      <path d={`M${coilEndX} 256 C 270 256, 280 180, 328 180`} fill="none" stroke="#4f46e5" strokeWidth="3" strokeLinecap="round" className="mlbio-flow" />
+      {/* merged band: rounded end in the shared solid blue */}
+      <rect x="420" y="152" width="98" height="96" rx="48" fill="#2f4fd8" />
 
-      {/* MLBIO node */}
-      <circle cx="396" cy="180" r="62" fill="#3b82f6" opacity="0.25" className="mlbio-pulse" />
-      <circle cx="396" cy="180" r="62" fill="url(#mlbio-node)" />
-      <circle cx="396" cy="180" r="54" fill="none" stroke="#ffffff" strokeOpacity="0.35" strokeWidth="1.5" />
-      <text x="396" y="186" textAnchor="middle" className="font-display" fontSize="22" fontWeight="700" fill="#ffffff" letterSpacing="-0.02em">
+      {/* sequences running along the ribbons */}
+      <g
+        mask="url(#mlbio-seq-mask)"
+        fontFamily="ui-monospace, SFMono-Regular, Menlo, monospace"
+        fontSize="13"
+        fontWeight="600"
+        letterSpacing="3"
+        fill="#ffffff"
+        fillOpacity="0.85"
+        dominantBaseline="central"
+      >
+        <text>
+          <textPath href="#mlbio-cb-path" startOffset="14">{DNA}</textPath>
+        </text>
+        <text>
+          <textPath href="#mlbio-sb-path" startOffset="2">{PROTEIN}</textPath>
+        </text>
+      </g>
+
+      <text
+        x="438"
+        y="201"
+        textAnchor="middle"
+        dominantBaseline="central"
+        className="font-display"
+        fontSize="30"
+        fontWeight="700"
+        letterSpacing="-0.5"
+        fill="#ffffff"
+      >
         MLBIO
+      </text>
+
+      {/* labels */}
+      <text x="24" y="28" className="font-display" fontSize="20" fontWeight="700" fill="#1e3a8a">
+        MLCB
+      </text>
+      <text x="24" y="384" className="font-display" fontSize="20" fontWeight="700" fill="#312e81">
+        MLSB
       </text>
     </svg>
   )

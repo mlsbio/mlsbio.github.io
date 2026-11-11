@@ -13,6 +13,7 @@ const mlsb: Edition[] = [
 ]
 
 const mlcb: Edition[] = [
+  { year: "2026", place: "New York City", href: "https://www.mlcb.org/home" },
   { year: "2025", place: "New York City", href: "https://sites.google.com/view/mlcb2025", proceedings: "https://proceedings.mlr.press/v311/" },
   { year: "2024", place: "Seattle & virtual", href: "https://sites.google.com/cs.washington.edu/mlcb2024/", proceedings: "https://proceedings.mlr.press/v261/" },
   { year: "2023", place: "Seattle & virtual", href: "https://sites.google.com/cs.washington.edu/mlcb2023/", proceedings: "https://proceedings.mlr.press/v240/" },
@@ -69,7 +70,7 @@ export default function PastEditions() {
             Past editions
           </h2>
           <p className="mt-4 font-display text-xl tracking-tight text-blue-900 sm:text-2xl">
-            MLBIO builds on two decades of workshops and conferences. The archives of both meetings stay online.
+            MLBIO builds on two decades of workshops and conferences. If you want to browse past editions check below.
           </p>
         </div>
         <div className="mt-12 grid gap-8 lg:grid-cols-2">
@@ -77,6 +78,12 @@ export default function PastEditions() {
             title="MLSB"
             subtitle="Machine Learning in Structural Biology · since 2020"
             editions={mlsb}
+            footer={
+              <p className="mt-4 text-sm text-slate-600">
+                All editions except 2025 San Diego were NeurIPS workshops; 2025 San Diego was co-located with
+                NeurIPS as an independent workshop.
+              </p>
+            }
           />
           <EditionList
             title="MLCB"
