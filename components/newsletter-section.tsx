@@ -35,16 +35,16 @@ export default function NewsletterSection() {
             <div>
               <h4 className="font-semibold mb-4">Quick Links</h4>
               <div className="space-y-2">
-                <Link href="/schedule" className="block text-slate-300 hover:text-white transition-colors">
+                <Link href="/2025/schedule" className="block text-slate-300 hover:text-white transition-colors">
                   Schedule
                 </Link>
-                <Link href="/call-for-papers" className="block text-slate-300 hover:text-white transition-colors">
+                <Link href="/2025/call-for-papers" className="block text-slate-300 hover:text-white transition-colors">
                   Call for Papers
                 </Link>
-                <Link href="/committee" className="block text-slate-300 hover:text-white transition-colors">
+                <Link href="/2025/committee" className="block text-slate-300 hover:text-white transition-colors">
                   Organizing Committee
                 </Link>
-                <Link href="/past-editions" className="block text-slate-300 hover:text-white transition-colors">
+                <Link href="/2025/past-editions" className="block text-slate-300 hover:text-white transition-colors">
                   Past Editions
                 </Link>
               </div>

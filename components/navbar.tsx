@@ -18,14 +18,22 @@ export default function Navbar({ highlight }: NavbarProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   // Use highlight prop if provided, otherwise use pathname
-  const activePath = highlight ? `/${highlight}` : pathname;
+  const activePath = highlight ? `/${highlight}` : (pathname.replace(/^\/2025/, "") || "/");
   const isActive = (path: string) => activePath === path;
 
   return (
     <nav className="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
+      <div className="bg-blue-900 text-blue-50 text-xs sm:text-sm">
+        <div className="max-w-7xl mx-auto px-4 py-1.5 flex items-center justify-between gap-2">
+          <span>You are viewing the MLSB 2025 archive.</span>
+          <Link href="/" className="font-medium underline-offset-2 hover:underline whitespace-nowrap">
+            &larr; MLBIO home
+          </Link>
+        </div>
+      </div>
       <div className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-           <Link href="/" className="flex items-center space-x-2">
+           <Link href="/2025" className="flex items-center space-x-2">
             <img src="/mlsb.svg" alt="MLSB Logo" className="h-12" />
 
              <div className="pl-4 flex flex-col justify-start">
@@ -51,7 +59,7 @@ export default function Navbar({ highlight }: NavbarProps) {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-6">
              <a
-              href="/#speakers"
+              href="/2025#speakers"
               className={`transition-colors ${
                 isActive("/") ? "text-blue-600 font-medium" : "text-slate-600 hover:text-blue-600"
               }`}
@@ -60,7 +68,7 @@ export default function Navbar({ highlight }: NavbarProps) {
             </a>
             <div className="flex flex-col">
             <Link
-              href="/schedule"
+              href="/2025/schedule"
               className={`transition-colors flex items-center space-x-1 ${
                 isActive("/schedule") ? "text-blue-600 font-medium" : "text-slate-600 hover:text-blue-600"
               }`}
@@ -70,7 +78,7 @@ export default function Navbar({ highlight }: NavbarProps) {
 
             </Link>
             <Link
-              href="/scheduleeu"
+              href="/2025/scheduleeu"
               className={`transition-colors flex items-center space-x-1 ${
                 isActive("/scheduleeu") ? "text-blue-600 font-medium" : "text-slate-600 hover:text-blue-600"
               }`}
@@ -82,7 +90,7 @@ export default function Navbar({ highlight }: NavbarProps) {
             </div>
 
             <Link
-              href="/call-for-papers"
+              href="/2025/call-for-papers"
               className={`transition-colors ${
                 isActive("/call-for-papers") ? "text-blue-600 font-medium" : "text-slate-600 hover:text-blue-600"
               }`}
@@ -90,7 +98,7 @@ export default function Navbar({ highlight }: NavbarProps) {
               Call for Papers
             </Link>
             <Link
-              href="/accepted-papers"
+              href="/2025/accepted-papers"
               className={`transition-colors flex items-center space-x-1 ${
                 isActive("/accepted-papers") ? "text-blue-600 font-medium" : "text-slate-600 hover:text-blue-600"
               }`}
@@ -99,7 +107,7 @@ export default function Navbar({ highlight }: NavbarProps) {
 
             </Link>
             <Link
-              href="/committee"
+              href="/2025/committee"
               className={`transition-colors ${
                 isActive("/committee") ? "text-blue-600 font-medium" : "text-slate-600 hover:text-blue-600"
               }`}
@@ -107,7 +115,7 @@ export default function Navbar({ highlight }: NavbarProps) {
               Organizing Committee
             </Link>
             <Link
-              href="/past-editions"
+              href="/2025/past-editions"
               className={`transition-colors ${
                 isActive("/past-editions") ? "text-blue-600 font-medium" : "text-slate-600 hover:text-blue-600"
               }`}
@@ -146,7 +154,7 @@ export default function Navbar({ highlight }: NavbarProps) {
           <div className="md:hidden mt-4 py-4 border-t border-slate-200">
             <div className="flex flex-col space-y-4">
                <a
-              href="/#speakers"
+              href="/2025#speakers"
              className={`px-4 py-2 rounded-md transition-colors ${
                   isActive("/")
                     ? "text-blue-600 font-medium bg-blue-50"
@@ -156,7 +164,7 @@ export default function Navbar({ highlight }: NavbarProps) {
               Speakers
             </a>
               <Link
-                href="/schedule"
+                href="/2025/schedule"
                 className={`px-4 py-2 rounded-md transition-colors ${
                   isActive("/schedule")
                     ? "text-blue-600 font-medium bg-blue-50"
@@ -167,7 +175,7 @@ export default function Navbar({ highlight }: NavbarProps) {
                 Schedule US
               </Link>
                <Link
-                href="/scheduleeu"
+                href="/2025/scheduleeu"
                 className={`px-4 py-2 rounded-md transition-colors ${
                   isActive("/scheduleeu")
                     ? "text-blue-600 font-medium bg-blue-50"
@@ -178,7 +186,7 @@ export default function Navbar({ highlight }: NavbarProps) {
                 Schedule EU
               </Link>
               <Link
-                href="/call-for-papers"
+                href="/2025/call-for-papers"
                 className={`px-4 py-2 rounded-md transition-colors ${
                   isActive("/call-for-papers")
                     ? "text-blue-600 font-medium bg-blue-50"
@@ -189,7 +197,7 @@ export default function Navbar({ highlight }: NavbarProps) {
                 Call for Papers
               </Link>
                <Link
-                href="/accepted-papers"
+                href="/2025/accepted-papers"
                 className={`px-4 py-2 rounded-md transition-colors ${
                   isActive("/accepted-papers")
                     ? "text-blue-600 font-medium bg-blue-50"
@@ -200,7 +208,7 @@ export default function Navbar({ highlight }: NavbarProps) {
                 Accepted Papers
               </Link>
               <Link
-                href="/committee"
+                href="/2025/committee"
                 className={`px-4 py-2 rounded-md transition-colors ${
                   isActive("/committee")
                     ? "text-blue-600 font-medium bg-blue-50"
@@ -211,7 +219,7 @@ export default function Navbar({ highlight }: NavbarProps) {
                 Organizing Committee
               </Link>
               <Link
-                href="/past-editions"
+                href="/2025/past-editions"
                 className={`px-4 py-2 rounded-md transition-colors ${
                   isActive("/past-editions")
                     ? "text-blue-600 font-medium bg-blue-50"
