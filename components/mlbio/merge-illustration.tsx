@@ -1,5 +1,5 @@
 // Hero illustration: two ribbons, one carrying a DNA sequence (MLCB) and one a
-// protein sequence (MLSB), converge and stack into a single MLBIO band. The
+// protein sequence (MLSB), converge and stack into a single MLBio band. The
 // protein ribbon starts as an alpha helix (cartoon style) that unwinds into
 // the flat band.
 
@@ -66,7 +66,7 @@ export default function MergeIllustration({ className = "" }: { className?: stri
     <svg
       viewBox="0 0 520 400"
       role="img"
-      aria-label="Illustration: the MLCB and MLSB ribbons merging into one MLBIO band"
+      aria-label="Illustration: the MLCB and MLSB ribbons merging into one MLBio band"
       className={className}
     >
       <defs>
@@ -88,7 +88,7 @@ export default function MergeIllustration({ className = "" }: { className?: stri
           <stop offset="45%" stopColor="#ffffff" stopOpacity="0.25" />
           <stop offset="100%" stopColor="#1e1b4b" stopOpacity="0.06" />
         </linearGradient>
-        {/* Sequences fade out before the MLBIO label */}
+        {/* Sequences fade out before the MLBio label */}
         <linearGradient id="mlbio-seq-fade" gradientUnits="userSpaceOnUse" x1="330" x2="395" y1="0" y2="0">
           <stop offset="0%" stopColor="#ffffff" />
           <stop offset="100%" stopColor="#000000" />
@@ -166,7 +166,7 @@ export default function MergeIllustration({ className = "" }: { className?: stri
         letterSpacing="-0.5"
         fill="#ffffff"
       >
-        MLBIO
+        MLBio
       </text>
 
       {/* labels */}

@@ -70,7 +70,7 @@ export default function PastEditions() {
             Past editions
           </h2>
           <p className="mt-4 font-display text-xl tracking-tight text-blue-900 sm:text-2xl">
-            MLBIO builds on two decades of workshops and conferences. If you want to browse past editions check below.
+            MLBio builds on two decades of workshops and conferences. If you want to browse past editions check below.
           </p>
         </div>
         <div className="mt-12 grid gap-8 lg:grid-cols-2">

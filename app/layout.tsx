@@ -6,9 +6,9 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'sw
 const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-dm-sans', display: 'swap' })
 
 export const metadata: Metadata = {
-  title: 'MLBIO – Machine Learning in Biology',
+  title: 'MLBio – Machine Learning in Biology',
   description:
-    'MLCB (Machine Learning in Computational Biology) and MLSB (Machine Learning in Structural Biology) are joining forces as MLBIO.',
+    'MLCB (Machine Learning in Computational Biology) and MLSB (Machine Learning in Structural Biology) are joining forces as MLBio.',
 }
 
 export default function RootLayout({

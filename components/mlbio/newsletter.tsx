@@ -1,10 +1,8 @@
 import { Mail } from "lucide-react"
 import { Container, GlowBackground } from "./container"
 
-const groups = [
-  { name: "MLCB", href: "https://groups.google.com/g/mlcb/" },
-  { name: "MLSB", href: "https://groups.google.com/g/workshopmlsb" },
-]
+// Shared MLBio mailing list: mlbio@googlegroups.com
+const GROUP_URL = "https://groups.google.com/g/mlbio"
 
 export default function Newsletter() {
   return (
@@ -18,23 +16,23 @@ export default function Newsletter() {
                 Stay up to date
               </h2>
               <p className="mt-4 font-display text-xl tracking-tight text-blue-900 sm:text-2xl">
-                The date, call for papers and registration for MLBIO will be announced on both the MLCB and
-                MLSB Google Groups. Join either one (or both) to hear first.
+                The date, call for papers and registration for MLBio will be announced on the MLBio Google
+                Group. Join to hear first.
+              </p>
+              <p className="mt-4 text-sm text-slate-600">
+                Already on the MLSB or MLCB mailing list? You have been added to the MLBio group automatically.
               </p>
             </div>
-            <div className="flex flex-col gap-4 sm:flex-row lg:flex-col xl:flex-row lg:justify-end">
-              {groups.map((g) => (
-                <a
-                  key={g.name}
-                  href={g.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-2xl bg-blue-600 px-6 py-4 text-base font-semibold text-white shadow-lg shadow-blue-900/10 hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
-                >
-                  <Mail className="h-5 w-5" aria-hidden="true" />
-                  Join the {g.name} Google Group
-                </a>
-              ))}
+            <div className="flex lg:justify-end">
+              <a
+                href={GROUP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-600 px-6 py-4 text-base font-semibold text-white shadow-lg shadow-blue-900/10 hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 sm:w-auto"
+              >
+                <Mail className="h-5 w-5" aria-hidden="true" />
+                Join the MLBio Google Group
+              </a>
             </div>
           </div>
         </div>

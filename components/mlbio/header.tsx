@@ -4,7 +4,7 @@ import { Container } from "./container"
 export function Wordmark({ className = "" }: { className?: string }) {
   return (
     <Link href="/" className={`font-display text-2xl font-bold tracking-tight text-blue-900 ${className}`}>
-      ML<span className="text-blue-600">BIO</span>
+      ML<span className="text-blue-600">Bio</span>
     </Link>
   )
 }
@@ -17,12 +17,8 @@ export default function Header() {
         <div className="order-first -mx-4 flex flex-auto basis-full justify-center overflow-x-auto border-b border-blue-600/10 py-3 font-mono text-sm text-blue-600 sm:-mx-6 lg:order-none lg:mx-0 lg:basis-auto lg:border-0 lg:py-0">
           <div className="mx-auto flex items-center gap-4 px-4">
             <p>
-              Next edition: <span className="font-semibold">Date TBD</span>
+              Next edition: <span className="font-semibold">TBD</span>
             </p>
-            <svg aria-hidden="true" viewBox="0 0 2 2" className="h-1.5 w-1.5 flex-none fill-current">
-              <circle cx="1" cy="1" r="1" />
-            </svg>
-            <p>BioHub</p>
           </div>
         </div>
         <div className="flex flex-auto justify-end sm:flex-none">

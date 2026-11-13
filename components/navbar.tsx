@@ -27,7 +27,7 @@ export default function Navbar({ highlight }: NavbarProps) {
         <div className="max-w-7xl mx-auto px-4 py-1.5 flex items-center justify-between gap-2">
           <span>You are viewing the MLSB 2025 archive.</span>
           <Link href="/" className="font-medium underline-offset-2 hover:underline whitespace-nowrap">
-            &larr; MLBIO home
+            &larr; MLBio home
           </Link>
         </div>
       </div>

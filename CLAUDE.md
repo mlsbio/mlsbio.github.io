@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-The website for MLBIO, the merged MLCB (Machine Learning in Computational Biology) and MLSB (Machine Learning in Structural Biology) meeting, served at mlsb.io. It is a Next.js 15 / React 19 app (App Router, Tailwind v3, shadcn/ui components in `components/ui/`). The README is a leftover from an old theme and not relevant.
+The website for MLBio, the merged MLCB (Machine Learning in Computational Biology) and MLSB (Machine Learning in Structural Biology) meeting, served at mlsb.io. Always write the name as **MLBio** (not MLBIO). It is a Next.js 15 / React 19 app (App Router, Tailwind v3, shadcn/ui components in `components/ui/`). The README is a leftover from an old theme and not relevant.
 
 ## Commands
 
@@ -22,7 +22,7 @@ A push to `master` triggers `.github/workflows/nextjs.yml`, which builds with pn
 
 ## Structure
 
-- `/` is the MLBIO landing page: `app/page.tsx`, built from `components/mlbio/*` (header, hero with the `merge-illustration` SVG, past editions, Google Group sign-ups, footer). Its look is a hand-made approximation of Tailwind UI's Keynote template, which is paid, so none of its code is in the repo. Fonts are Inter (`font-sans`) and DM Sans (`font-display`), set in `app/layout.tsx` and `tailwind.config.ts`.
+- `/` is the MLBio landing page: `app/page.tsx`, built from `components/mlbio/*` (header, hero with the `merge-illustration` SVG, past editions, sign-up for the shared MLBio Google Group mlbio@googlegroups.com, footer). Its look is a hand-made approximation of Tailwind UI's Keynote template, which is paid, so none of its code is in the repo. Fonts are Inter (`font-sans`) and DM Sans (`font-display`), set in `app/layout.tsx` and `tailwind.config.ts`.
 - `/2025/*` (`app/2025/`) is the archived MLSB 2025 site. `app/2025/layout.tsx` gives it its own metadata and the Geist font. Its pages use `components/navbar.tsx` and `components/newsletter-section.tsx`, and every internal link in them must be prefixed with `/2025`. The navbar has separate desktop and mobile link lists.
 - `app/{schedule,scheduleeu,call-for-papers,accepted-papers,committee,past-editions}/page.tsx` are redirect stubs (`components/legacy-redirect.tsx`) that keep the old shared MLSB 2025 URLs working. Static export can't do server redirects.
 - In MLSB 2025, content such as speakers, schedule items and committee members is hardcoded as arrays inside each page component. Edit those arrays to change the content.

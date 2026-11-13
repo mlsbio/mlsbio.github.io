@@ -2,8 +2,7 @@ import { Container } from "./container"
 import MergeIllustration from "./merge-illustration"
 
 const facts = [
-  ["Next edition", "Date TBD"],
-  ["Venue", "BioHub"],
+  ["Date & venue", "TBD"],
   ["Communities", "MLCB + MLSB"],
 ]
 
@@ -17,7 +16,7 @@ export default function Hero() {
               MLCB &amp; MLSB are joining forces
             </p>
             <h1 className="mt-4 font-display font-bold tracking-tighter">
-              <span className="block text-6xl text-blue-600 sm:text-8xl">MLBIO</span>
+              <span className="block text-6xl text-blue-600 sm:text-8xl">MLBio</span>
               <span className="mt-2 block text-3xl text-blue-900 sm:text-5xl">Machine Learning in Biology</span>
             </h1>
             <p className="mt-6 max-w-xl font-display text-xl tracking-tight text-blue-900 sm:text-2xl">
