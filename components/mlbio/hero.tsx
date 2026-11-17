@@ -2,7 +2,7 @@ import { Container } from "./container"
 import MergeIllustration from "./merge-illustration"
 
 const facts = [
-  ["Date & venue", "TBD"],
+  ["Next edition", "2027"],
   ["Communities", "MLCB + MLSB"],
 ]
 

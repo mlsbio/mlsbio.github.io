@@ -17,7 +17,7 @@ export default function Header() {
         <div className="order-first -mx-4 flex flex-auto basis-full justify-center overflow-x-auto border-b border-blue-600/10 py-3 font-mono text-sm text-blue-600 sm:-mx-6 lg:order-none lg:mx-0 lg:basis-auto lg:border-0 lg:py-0">
           <div className="mx-auto flex items-center gap-4 px-4">
             <p>
-              Next edition: <span className="font-semibold">TBD</span>
+              Next edition: <span className="font-semibold">2027</span>
             </p>
           </div>
         </div>
